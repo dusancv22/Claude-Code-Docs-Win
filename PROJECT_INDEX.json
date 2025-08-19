@@ -1,0 +1,1183 @@
+{
+  "indexed_at": "2025-08-19T14:16:01.719045",
+  "root": ".",
+  "project_structure": {
+    "type": "tree",
+    "root": ".",
+    "tree": [
+      ".",
+      "+-- docs/ (1 files)",
+      "+-- scripts/ (1 files)",
+      "|   +-- requirements.txt",
+      "+-- README.md"
+    ]
+  },
+  "documentation_map": {
+    "CLAUDE.md": {
+      "sections": [
+        "Claude Code Documentation Mirror",
+        "For /docs Command",
+        "Files to ultrathink about"
+      ],
+      "architecture_hints": []
+    },
+    "README.md": {
+      "sections": [
+        "Claude Code Documentation Mirror",
+        "\u26a0\ufe0f Early Beta Notice",
+        "\ud83c\udd95 Version 0.4.0 - Windows Support!",
+        "Why This Exists",
+        "Platform Compatibility",
+        "Prerequisites",
+        "Installation",
+        "Windows",
+        "Download the installer",
+        "Run it"
+      ],
+      "architecture_hints": []
+    },
+    "UNINSTALL.md": {
+      "sections": [
+        "Uninstalling Claude Code Documentation Mirror",
+        "Quick Uninstall",
+        "For v0.3+ (installed at ~/.claude-code-docs)",
+        "For v0.2 or older (custom installation locations)",
+        "What Gets Removed",
+        "Manual Uninstall",
+        "1. Remove the command file:",
+        "2. Remove the hook from Claude settings:",
+        "3. Remove the installation directory:",
+        "Multiple Installations"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\amazon-bedrock.md": {
+      "sections": [
+        "Claude Code on Amazon Bedrock",
+        "Prerequisites",
+        "Setup",
+        "1. Enable model access",
+        "2. Configure AWS credentials",
+        "3. Configure Claude Code",
+        "Enable Bedrock integration",
+        "Optional: Override the region for the small/fast model (Haiku)",
+        "4. Model configuration",
+        "Using inference profile ID"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\analytics.md": {
+      "sections": [
+        "Analytics",
+        "Access analytics",
+        "Required roles",
+        "Available metrics",
+        "Lines of code accepted",
+        "Suggestion accept rate",
+        "Activity",
+        "Spend",
+        "Team insights",
+        "Using analytics effectively"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\changelog.md": {
+      "sections": [
+        "Claude Code Changelog",
+        "Changelog",
+        "1.0.83",
+        "1.0.82",
+        "1.0.81",
+        "1.0.80",
+        "1.0.77",
+        "1.0.73",
+        "1.0.72",
+        "1.0.71"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\cli-reference.md": {
+      "sections": [
+        "CLI reference",
+        "CLI commands",
+        "CLI flags"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\common-workflows.md": {
+      "sections": [
+        "Common workflows",
+        "Understand new codebases",
+        "Get a quick codebase overview",
+        "Find relevant code",
+        "Fix bugs efficiently",
+        "Refactor code",
+        "Use specialized subagents",
+        "Work with tests"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\corporate-proxy.md": {
+      "sections": [
+        "Corporate proxy configuration",
+        "Basic proxy configuration",
+        "Environment variables",
+        "HTTPS proxy (recommended)",
+        "HTTP proxy (if HTTPS not available)",
+        "Authentication",
+        "Basic authentication",
+        "SSL certificate issues",
+        "Network access requirements",
+        "Additional resources"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\costs.md": {
+      "sections": [
+        "Manage costs effectively",
+        "Track your costs",
+        "Using the `/cost` command",
+        "Additional tracking options",
+        "Managing costs for teams",
+        "Rate limit recommendations",
+        "Reduce token usage",
+        "Background token usage",
+        "Tracking version changes and updates",
+        "Current version infor"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\data-usage.md": {
+      "sections": [
+        "Data usage",
+        "Data policies",
+        "Data training policy",
+        "Development Partner Program",
+        "Feedback transcripts",
+        "Data retention",
+        "Privacy safeguards",
+        "Data flow and dependencies",
+        "Telemetry services",
+        "Default behaviors by API provider"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\devcontainer.md": {
+      "sections": [
+        "Development containers",
+        "Key features",
+        "Getting started in 4 steps",
+        "Configuration breakdown",
+        "Security features",
+        "Customization options",
+        "Example use cases",
+        "Secure client work",
+        "Team onboarding",
+        "Consistent CI/CD environments"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\github-actions.md": {
+      "sections": [
+        "Claude Code GitHub Actions",
+        "Why use Claude Code GitHub Actions?",
+        "What can Claude do?",
+        "Claude Code Action",
+        "Claude Code Action (Base)",
+        "Setup",
+        "Quick setup",
+        "Manual setup",
+        "Example use cases",
+        "Turn issues into PRs"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\google-vertex-ai.md": {
+      "sections": [
+        "Claude Code on Google Vertex AI",
+        "Prerequisites",
+        "Setup",
+        "1. Enable Vertex AI API",
+        "Set your project ID",
+        "Enable Vertex AI API",
+        "2. Request model access",
+        "3. Configure GCP credentials",
+        "4. Configure Claude Code",
+        "Enable Vertex AI integration"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\hooks-guide.md": {
+      "sections": [
+        "Get started with Claude Code hooks",
+        "Hook Events Overview",
+        "Quickstart",
+        "Prerequisites",
+        "Step 1: Open hooks configuration",
+        "Step 2: Add a matcher",
+        "Step 3: Add the hook",
+        "Step 4: Save your configuration",
+        "Step 5: Verify your hook",
+        "Step 6: Test your hook"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\hooks.md": {
+      "sections": [
+        "Hooks reference",
+        "Configuration",
+        "Structure",
+        "Project-Specific Hook Scripts",
+        "Hook Events",
+        "PreToolUse",
+        "PostToolUse",
+        "Notification",
+        "UserPromptSubmit",
+        "Stop"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\iam.md": {
+      "sections": [
+        "Identity and Access Management",
+        "Authentication methods",
+        "Anthropic API authentication",
+        "Cloud provider authentication",
+        "Access control and permissions",
+        "Permission system",
+        "Configuring permissions"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\ide-integrations.md": {
+      "sections": [
+        "Add Claude Code to your IDE",
+        "Features",
+        "Installation",
+        "Usage",
+        "From your IDE",
+        "From external terminals",
+        "Configuration",
+        "Troubleshooting",
+        "VS Code extension not installing",
+        "JetBrains plugin not working"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\interactive-mode.md": {
+      "sections": [
+        "Interactive mode",
+        "Keyboard shortcuts",
+        "General controls",
+        "Multiline input",
+        "Quick commands",
+        "Vim mode",
+        "Mode switching",
+        "Navigation (NORMAL mode)",
+        "Editing (NORMAL mode)",
+        "Command history"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\legal-and-compliance.md": {
+      "sections": [
+        "Legal and compliance",
+        "Legal agreements",
+        "License",
+        "Commercial agreements",
+        "Compliance",
+        "Healthcare compliance (BAA)",
+        "Security and trust",
+        "Trust and safety",
+        "Security vulnerability reporting"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\llm-gateway.md": {
+      "sections": [
+        "LLM gateway configuration",
+        "LiteLLM configuration",
+        "Prerequisites",
+        "Basic LiteLLM setup",
+        "Set in environment",
+        "Or in Claude Code settings",
+        "~/bin/get-litellm-key.sh",
+        "Example: Fetch key from vault",
+        "Example: Generate JWT token",
+        "Refresh every hour (3600000 ms)"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\mcp.md": {
+      "sections": [
+        "Connect Claude Code to tools via MCP"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\memory.md": {
+      "sections": [
+        "Manage Claude's memory",
+        "Determine memory type",
+        "CLAUDE.md imports",
+        "Additional Instructions",
+        "Individual Preferences",
+        "How Claude looks up memories",
+        "Quickly add memories with the `#` shortcut",
+        "Always use descriptive variable names",
+        "Directly edit memories with `/memory`",
+        "Set up project memory"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\monitoring-usage.md": {
+      "sections": [
+        "Monitoring",
+        "Quick Start",
+        "1. Enable telemetry",
+        "2. Choose exporters (both are optional - configure only what you need)",
+        "3. Configure OTLP endpoint (for OTLP exporter)",
+        "4. Set authentication (if required)",
+        "5. For debugging: reduce export intervals",
+        "6. Run Claude Code",
+        "Administrator Configuration",
+        "Configuration Details"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\output-styles.md": {
+      "sections": [
+        "Output styles",
+        "Built-in output styles",
+        "How output styles work",
+        "Change your output style",
+        "Create a custom output style",
+        "Custom Style Instructions",
+        "Specific Behaviors",
+        "Comparisons to related features",
+        "Output Styles vs. CLAUDE.md vs. --append-system-prompt",
+        "Output Styles vs. [Agents](/en/docs/claude-code/sub-agents)"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\overview.md": {
+      "sections": [
+        "Claude Code overview",
+        "Get started in 30 seconds",
+        "Install Claude Code",
+        "Navigate to your project",
+        "Start coding with Claude",
+        "What Claude Code does for you",
+        "Why developers love Claude Code",
+        "Next steps",
+        "Additional resources"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\quickstart.md": {
+      "sections": [
+        "Quickstart",
+        "Before you begin",
+        "Step 1: Install Claude Code",
+        "NPM Install",
+        "Native Install",
+        "Step 2: Start your first session",
+        "Step 3: Ask your first question",
+        "Step 4: Make your first code change",
+        "Step 5: Use Git with Claude Code",
+        "Step 6: Fix a bug or add a feature"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\sdk.md": {
+      "sections": [
+        "Claude Code SDK",
+        "Why use the Claude Code SDK?",
+        "What can you build with the SDK?",
+        "Quick start"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\security.md": {
+      "sections": [
+        "Security",
+        "How we approach security",
+        "Security foundation",
+        "Permission-based architecture",
+        "Built-in protections",
+        "User responsibility",
+        "Protect against prompt injection",
+        "Core protections",
+        "Privacy safeguards",
+        "Additional safeguards"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\settings.md": {
+      "sections": [
+        "Claude Code settings",
+        "Settings files",
+        "Available settings"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\setup.md": {
+      "sections": [
+        "Set up Claude Code",
+        "System requirements",
+        "Additional dependencies",
+        "Standard installation",
+        "Windows setup",
+        "Alternative installation methods",
+        "Global npm installation",
+        "Native binary installation (Beta)",
+        "Install stable version (default)",
+        "Install latest version"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\slash-commands.md": {
+      "sections": [
+        "Slash commands",
+        "Built-in slash commands",
+        "Custom slash commands",
+        "Syntax",
+        "Command types"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\statusline.md": {
+      "sections": [
+        "Status line configuration",
+        "Create a custom status line",
+        "How it Works",
+        "JSON Input Structure",
+        "Example Scripts",
+        "Simple Status Line",
+        "Read JSON input from stdin",
+        "Extract values using jq",
+        "Git-Aware Status Line",
+        "Read JSON input from stdin"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\sub-agents.md": {
+      "sections": [
+        "Subagents",
+        "What are subagents?",
+        "Key benefits",
+        "Quick start",
+        "Subagent configuration",
+        "File locations",
+        "File format",
+        "Available tools"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\terminal-config.md": {
+      "sections": [
+        "Optimize your terminal setup",
+        "Themes and appearance",
+        "Line breaks",
+        "Notification setup",
+        "Handling large inputs",
+        "Vim Mode"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\third-party-integrations.md": {
+      "sections": [
+        "Enterprise deployment overview",
+        "Provider comparison",
+        "Cloud providers",
+        "Corporate infrastructure",
+        "Configuration overview",
+        "Using Bedrock with corporate proxy",
+        "Enable Bedrock",
+        "Configure corporate proxy",
+        "Using Bedrock with LLM Gateway",
+        "Enable Bedrock"
+      ],
+      "architecture_hints": []
+    },
+    "docs\\troubleshooting.md": {
+      "sections": [
+        "Troubleshooting",
+        "Common installation issues",
+        "Windows installation issues: errors in WSL",
+        "Linux and Mac installation issues: permission or command not found errors",
+        "Install stable version (default)",
+        "Install latest version",
+        "Install specific version number",
+        "Install stable version (default)",
+        "Install latest version",
+        "Install specific version number"
+      ],
+      "architecture_hints": []
+    }
+  },
+  "directory_purposes": {
+    "docs": "Project documentation",
+    "scripts": "Build and utility scripts"
+  },
+  "stats": {
+    "total_files": 8,
+    "total_directories": 5,
+    "fully_parsed": {
+      "python": 4,
+      "shell": 2
+    },
+    "listed_only": {
+      "json": 2
+    },
+    "markdown_files": 37
+  },
+  "files": {
+    "claude-docs-helper.py": {
+      "language": "python",
+      "parsed": true,
+      "purpose": "Utility functions",
+      "imports": [
+        "json",
+        "os",
+        "platform",
+        "subprocess",
+        "sys",
+        "datetime",
+        "pathlib",
+        "typing",
+        "io",
+        "textwrap"
+      ],
+      "functions": {
+        "load_manifest": {
+          "doc": "Load the documentation manifest",
+          "signature": "() -> Dict",
+          "called_by": [
+            "main"
+          ]
+        },
+        "git_operation": {
+          "doc": "Execute git operation",
+          "signature": "(args: List[str]) -> Tuple[bool, str]",
+          "called_by": [
+            "check_for_updates",
+            "pull_updates",
+            "get_last_update_time",
+            "show_whats_new",
+            "migrate_installation",
+            "safe_git_update",
+            "cleanup_old_installations",
+            "main",
+            "remove_directories"
+          ]
+        },
+        "check_for_updates": {
+          "doc": "Check if there are updates available from GitHub",
+          "calls": [
+            "git_operation"
+          ],
+          "signature": "() -> Tuple[bool, str]",
+          "called_by": [
+            "check_freshness",
+            "hook_check"
+          ]
+        },
+        "pull_updates": {
+          "doc": "Pull latest updates from GitHub",
+          "calls": [
+            "git_operation"
+          ],
+          "signature": "() -> bool",
+          "called_by": [
+            "check_freshness",
+            "hook_check"
+          ]
+        },
+        "get_last_update_time": {
+          "doc": "Get the last time docs were updated",
+          "calls": [
+            "git_operation"
+          ],
+          "signature": "() -> Optional[datetime]",
+          "called_by": [
+            "check_freshness"
+          ]
+        },
+        "format_time_ago": {
+          "doc": "Format datetime as 'X hours/days ago'",
+          "signature": "(dt: datetime) -> str",
+          "called_by": [
+            "show_whats_new",
+            "check_freshness"
+          ]
+        },
+        "list_topics": {
+          "doc": "List all available documentation topics",
+          "signature": "() -> List[str]",
+          "called_by": [
+            "main"
+          ]
+        },
+        "read_doc": {
+          "doc": "Read a specific documentation file",
+          "signature": "(topic: str) -> Optional[str]",
+          "called_by": [
+            "main"
+          ]
+        },
+        "show_whats_new": {
+          "doc": "Show recent documentation changes",
+          "calls": [
+            "format_time_ago",
+            "git_operation"
+          ],
+          "signature": "(limit: int = 5) -> None",
+          "called_by": [
+            "main"
+          ]
+        },
+        "check_freshness": {
+          "doc": "Check and display documentation freshness",
+          "calls": [
+            "check_for_updates",
+            "format_time_ago",
+            "get_last_update_time",
+            "pull_updates"
+          ],
+          "signature": "() -> None",
+          "called_by": [
+            "main"
+          ]
+        },
+        "hook_check": {
+          "doc": "Called by Claude Code hooks to auto-update when needed",
+          "calls": [
+            "check_for_updates",
+            "pull_updates"
+          ],
+          "signature": "() -> None",
+          "called_by": [
+            "main"
+          ]
+        },
+        "main": {
+          "doc": "Main entry point",
+          "calls": [
+            "check_freshness",
+            "hook_check",
+            "list_topics",
+            "read_doc",
+            "show_whats_new"
+          ],
+          "signature": "()"
+        }
+      },
+      "classes": {},
+      "constants": {
+        "INSTALL_DIR": "value",
+        "DOCS_DIR": "value",
+        "MANIFEST_FILE": "value",
+        "LAST_CHECK_FILE": "value",
+        "CHECK_INTERVAL": "value",
+        "GITHUB_REPO": "str",
+        "OFFICIAL_DOCS": "str"
+      },
+      "call_graph": {}
+    },
+    "install.py": {
+      "language": "python",
+      "parsed": true,
+      "imports": [
+        "json",
+        "os",
+        "platform",
+        "shutil",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing",
+        "io",
+        "requests",
+        "re",
+        "re",
+        "textwrap"
+      ],
+      "functions": {
+        "print_header": {
+          "doc": "Print installation header",
+          "signature": "()",
+          "called_by": [
+            "main",
+            "main"
+          ]
+        },
+        "check_dependencies": {
+          "doc": "Check if required dependencies are installed",
+          "signature": "() -> bool",
+          "called_by": [
+            "main"
+          ]
+        },
+        "find_existing_installations": {
+          "doc": "Find any existing claude-code-docs installations",
+          "signature": "() -> List[Path]",
+          "called_by": [
+            "main"
+          ]
+        },
+        "git_operation": {
+          "doc": "Execute git operation in a cross-platform way",
+          "signature": "(args: List[str], cwd: Optional[Path] = None) -> Tuple[bool, str]",
+          "called_by": [
+            "check_for_updates",
+            "pull_updates",
+            "get_last_update_time",
+            "show_whats_new",
+            "migrate_installation",
+            "safe_git_update",
+            "cleanup_old_installations",
+            "main",
+            "remove_directories"
+          ]
+        },
+        "migrate_installation": {
+          "doc": "Migrate from old installation to new location",
+          "calls": [
+            "git_operation"
+          ],
+          "signature": "(old_dir: Path)",
+          "called_by": [
+            "main"
+          ]
+        },
+        "safe_git_update": {
+          "doc": "Safely update the git repository",
+          "calls": [
+            "git_operation"
+          ],
+          "signature": "() -> bool",
+          "called_by": [
+            "main"
+          ]
+        },
+        "get_hook_command": {
+          "doc": "Get the appropriate hook command for the current platform",
+          "signature": "() -> str",
+          "called_by": [
+            "setup_hooks"
+          ]
+        },
+        "setup_command_file": {
+          "doc": "Create or update the /docs command file",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "setup_hooks": {
+          "doc": "Setup automatic update hooks in Claude settings",
+          "calls": [
+            "get_hook_command"
+          ],
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "setup_helper_script": {
+          "doc": "Create the Python helper script",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "cleanup_old_installations": {
+          "doc": "Clean up old installations",
+          "calls": [
+            "git_operation"
+          ],
+          "signature": "(old_installations: List[Path])",
+          "called_by": [
+            "main"
+          ]
+        },
+        "list_available_topics": {
+          "doc": "List available documentation topics",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "main": {
+          "doc": "Main installation logic",
+          "calls": [
+            "check_dependencies",
+            "cleanup_old_installations",
+            "find_existing_installations",
+            "git_operation",
+            "list_available_topics",
+            "migrate_installation",
+            "print_header",
+            "safe_git_update",
+            "setup_command_file",
+            "setup_helper_script",
+            "setup_hooks"
+          ],
+          "signature": "()"
+        }
+      },
+      "classes": {},
+      "constants": {
+        "VERSION": "str",
+        "REPO_URL": "str",
+        "INSTALL_BRANCH": "str",
+        "HOME": "value",
+        "INSTALL_DIR": "value",
+        "CLAUDE_DIR": "value",
+        "COMMANDS_DIR": "value",
+        "SETTINGS_FILE": "value",
+        "COMMAND_FILE": "value"
+      },
+      "call_graph": {}
+    },
+    "install.sh": {
+      "language": "shell",
+      "parsed": true,
+      "functions": {
+        "find_existing_installations": {
+          "doc": "Function to find existing installations from configs",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "migrate_installation": {
+          "doc": "Function to migrate from old location",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "safe_git_update": {
+          "doc": "Function to safely update git repository",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "cleanup_old_installations": {
+          "doc": "Function to cleanup old installations",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        }
+      },
+      "variables": [
+        "INSTALL_DIR",
+        "INSTALL_BRANCH",
+        "OS_TYPE",
+        "OLD_INSTALLATIONS",
+        "HOOK_COMMAND"
+      ],
+      "call_graph": {}
+    },
+    "PROJECT_INDEX.json": {
+      "language": "json",
+      "parsed": false
+    },
+    "uninstall.py": {
+      "language": "python",
+      "parsed": true,
+      "imports": [
+        "json",
+        "os",
+        "platform",
+        "shutil",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing",
+        "io",
+        "re",
+        "re"
+      ],
+      "functions": {
+        "print_header": {
+          "doc": "Print uninstaller header",
+          "signature": "()",
+          "called_by": [
+            "main",
+            "main"
+          ]
+        },
+        "find_all_installations": {
+          "doc": "Find all claude-code-docs installations",
+          "signature": "() -> List[Path]",
+          "called_by": [
+            "main"
+          ]
+        },
+        "git_operation": {
+          "doc": "Execute git operation",
+          "signature": "(args: List[str], cwd: Path) -> Tuple[bool, str]",
+          "called_by": [
+            "check_for_updates",
+            "pull_updates",
+            "get_last_update_time",
+            "show_whats_new",
+            "migrate_installation",
+            "safe_git_update",
+            "cleanup_old_installations",
+            "main",
+            "remove_directories"
+          ]
+        },
+        "remove_command_file": {
+          "doc": "Remove the /docs command file",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "remove_hooks": {
+          "doc": "Remove claude-code-docs hooks from settings",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        },
+        "remove_directories": {
+          "doc": "Remove installation directories",
+          "calls": [
+            "git_operation"
+          ],
+          "signature": "(installations: List[Path])",
+          "called_by": [
+            "main"
+          ]
+        },
+        "main": {
+          "doc": "Main uninstall logic",
+          "calls": [
+            "find_all_installations",
+            "print_header",
+            "remove_command_file",
+            "remove_directories",
+            "remove_hooks"
+          ],
+          "signature": "()"
+        }
+      },
+      "classes": {},
+      "constants": {
+        "HOME": "value",
+        "INSTALL_DIR": "value",
+        "CLAUDE_DIR": "value",
+        "SETTINGS_FILE": "value",
+        "COMMAND_FILE": "value"
+      },
+      "call_graph": {}
+    },
+    "uninstall.sh": {
+      "language": "shell",
+      "parsed": true,
+      "functions": {
+        "find_all_installations": {
+          "doc": "Find all installations from configs",
+          "signature": "()",
+          "called_by": [
+            "main"
+          ]
+        }
+      },
+      "call_graph": {}
+    },
+    "docs\\docs_manifest.json": {
+      "language": "json",
+      "parsed": false
+    },
+    "scripts\\fetch_claude_docs.py": {
+      "language": "python",
+      "parsed": true,
+      "imports": [
+        "requests",
+        "time",
+        "pathlib",
+        "typing",
+        "logging",
+        "datetime",
+        "sys",
+        "xml.etree.ElementTree",
+        "urllib.parse",
+        "json",
+        "hashlib",
+        "os",
+        "re",
+        "random"
+      ],
+      "functions": {
+        "load_manifest": {
+          "doc": "Load the manifest of previously fetched files.",
+          "signature": "(docs_dir: Path) -> dict",
+          "called_by": [
+            "main"
+          ]
+        },
+        "save_manifest": {
+          "doc": "Save the manifest of fetched files.",
+          "signature": "(docs_dir: Path, manifest: dict) -> None",
+          "called_by": [
+            "main"
+          ]
+        },
+        "url_to_safe_filename": {
+          "doc": "Convert a URL path to a safe filename that preserves hierarchy only when needed.",
+          "signature": "(url_path: str) -> str",
+          "called_by": [
+            "fetch_markdown_content"
+          ]
+        },
+        "discover_sitemap_and_base_url": {
+          "signature": "(session: requests.Session) -> Tuple[str, str]",
+          "called_by": [
+            "main"
+          ]
+        },
+        "discover_claude_code_pages": {
+          "signature": "(session: requests.Session, sitemap_url: str) -> List[str]",
+          "called_by": [
+            "main"
+          ]
+        },
+        "validate_markdown_content": {
+          "signature": "(content: str, filename: str) -> None",
+          "called_by": [
+            "fetch_markdown_content"
+          ]
+        },
+        "fetch_markdown_content": {
+          "calls": [
+            "url_to_safe_filename",
+            "validate_markdown_content"
+          ],
+          "signature": "(path: str, session: requests.Session, base_url: str) -> Tuple[str, str]",
+          "called_by": [
+            "main"
+          ]
+        },
+        "content_has_changed": {
+          "doc": "Check if content has changed based on hash.",
+          "signature": "(content: str, old_hash: str) -> bool",
+          "called_by": [
+            "main"
+          ]
+        },
+        "fetch_changelog": {
+          "signature": "(session: requests.Session) -> Tuple[str, str]",
+          "called_by": [
+            "main"
+          ]
+        },
+        "save_markdown_file": {
+          "doc": "Save markdown content and return its hash.",
+          "signature": "(docs_dir: Path, filename: str, content: str) -> str",
+          "called_by": [
+            "main"
+          ]
+        },
+        "cleanup_old_files": {
+          "signature": "(docs_dir: Path, current_files: Set[str], manifest: dict) -> None",
+          "called_by": [
+            "main"
+          ]
+        },
+        "main": {
+          "doc": "Main function with improved robustness.",
+          "calls": [
+            "cleanup_old_files",
+            "content_has_changed",
+            "discover_claude_code_pages",
+            "discover_sitemap_and_base_url",
+            "fetch_changelog",
+            "fetch_markdown_content",
+            "load_manifest",
+            "save_manifest",
+            "save_markdown_file"
+          ],
+          "signature": "()"
+        }
+      },
+      "classes": {},
+      "constants": {
+        "SITEMAP_URLS": "collection",
+        "MANIFEST_FILE": "str",
+        "HEADERS": "collection",
+        "MAX_RETRIES": "number",
+        "RETRY_DELAY": "number",
+        "MAX_RETRY_DELAY": "number",
+        "RATE_LIMIT_DELAY": "number"
+      },
+      "call_graph": {}
+    }
+  },
+  "dependency_graph": {
+    "claude-docs-helper.py": [
+      "json",
+      "os",
+      "platform",
+      "subprocess",
+      "sys",
+      "datetime",
+      "pathlib",
+      "typing",
+      "io",
+      "textwrap"
+    ],
+    "install.py": [
+      "json",
+      "os",
+      "platform",
+      "shutil",
+      "subprocess",
+      "sys",
+      "pathlib",
+      "typing",
+      "io",
+      "requests",
+      "re",
+      "re",
+      "textwrap"
+    ],
+    "uninstall.py": [
+      "json",
+      "os",
+      "platform",
+      "shutil",
+      "subprocess",
+      "sys",
+      "pathlib",
+      "typing",
+      "io",
+      "re",
+      "re"
+    ],
+    "scripts\\fetch_claude_docs.py": [
+      "requests",
+      "time",
+      "pathlib",
+      "typing",
+      "logging",
+      "datetime",
+      "sys",
+      "xml.etree.ElementTree",
+      "urllib.parse",
+      "json",
+      "hashlib",
+      "os",
+      "re",
+      "random"
+    ]
+  },
+  "staleness_check": 1755000961.875433
+}

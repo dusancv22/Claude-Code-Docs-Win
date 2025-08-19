@@ -1,7 +1,12 @@
 # Claude Code Documentation Mirror
 
+> **Originally created by [Eric Buess](https://github.com/ericbuess)** - [Original Repository](https://github.com/ericbuess/claude-code-docs)
+>
+> This is a Windows-focused fork that maintains the same functionality with enhanced Windows support.
+
+
 [![Last Update](https://img.shields.io/github/last-commit/ericbuess/claude-code-docs/main.svg?label=docs%20updated)](https://github.com/ericbuess/claude-code-docs/commits/main)
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-blue)]()
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)]()
 [![Beta](https://img.shields.io/badge/status-early%20beta-orange)](https://github.com/ericbuess/claude-code-docs/issues)
 
 Local mirror of Claude Code documentation files from https://docs.anthropic.com/en/docs/claude-code/, updated every 3 hours.
@@ -10,18 +15,15 @@ Local mirror of Claude Code documentation files from https://docs.anthropic.com/
 
 **This is an early beta release**. There may be errors or unexpected behavior. If you encounter any issues, please [open an issue](https://github.com/ericbuess/claude-code-docs/issues) - your feedback helps improve the tool!
 
-## 🆕 Version 0.3.3 - Changelog Integration
+## 🆕 Version 0.4.0 - Windows Support!
 
 **New in this version:**
+- 🪟 **Windows Support**: Full Windows compatibility using Python-based installer
+- 🐍 **Cross-platform Python**: Unified codebase works on Windows, macOS, and Linux
 - 📋 **Claude Code Changelog**: Access the official Claude Code release notes with `/docs changelog`
-- 🍎 **Full macOS compatibility**: Fixed shell compatibility issues for Mac users
-- 🐧 **Linux support**: Tested on Ubuntu, Debian, and other distributions
 - 🔧 **Improved installer**: Better handling of updates and edge cases
 
-To update:
-```bash
-curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.sh | bash
-```
+To update, use the appropriate command for your platform (see Installation section below).
 
 ## Why This Exists
 
@@ -33,30 +35,58 @@ curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/ins
 
 ## Platform Compatibility
 
+- ✅ **Windows**: Fully supported with Python installer (Windows 10/11)
 - ✅ **macOS**: Fully supported (tested on macOS 12+)
 - ✅ **Linux**: Fully supported (Ubuntu, Debian, Fedora, etc.)
-- ⏳ **Windows**: Not yet supported - [contributions welcome](#contributing)!
 
 ### Prerequisites
 
-This tool requires the following to be installed:
-- **git** - For cloning and updating the repository (usually pre-installed)
-- **jq** - For JSON processing in the auto-update hook (pre-installed on macOS; Linux users may need `apt install jq` or `yum install jq`)
-- **curl** - For downloading the installation script (usually pre-installed)
+**All platforms:**
+- **Python 3.7+** - Required for cross-platform compatibility
+- **Git** - For cloning and updating the repository
 - **Claude Code** - Obviously :)
+
+**Platform-specific notes:**
+- **Windows**: Python must be in your PATH (check "Add Python to PATH" during installation)
+- **macOS/Linux**: Python and Git are usually pre-installed
+- **Optional**: `requests` library (`pip install requests`) for enhanced features
 
 ## Installation
 
-Run this single command:
+### Windows
 
+**Option 1: Download and run installer**
+```powershell
+# Download the installer
+curl -o install.py https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.py
+# Run it
+python install.py
+```
+
+**Option 2: Clone and install**
+```powershell
+git clone https://github.com/ericbuess/claude-code-docs.git
+cd claude-code-docs
+python install.py
+# Or double-click install.bat
+```
+
+### macOS/Linux
+
+**Option 1: Shell installer (traditional)**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.sh | bash
 ```
 
-This will:
-1. Install to `~/.claude-code-docs` (or migrate existing installation)
-2. Create the `/docs` slash command to pass arguments to the tool and tell it where to find the docs
-3. Set up a 'PreToolUse' 'Read' hook to enable automatic git pull when reading docs from the ~/.claude-code-docs`
+**Option 2: Python installer (new, cross-platform)**
+```bash
+curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.py | python3
+```
+
+The installer will:
+1. Install to `~/.claude-code-docs` (or `%USERPROFILE%\.claude-code-docs` on Windows)
+2. Create the `/docs` slash command
+3. Set up auto-update hooks for keeping docs current
 
 **Note**: The command is `/docs (user)` - it will show in your command list with "(user)" after it to indicate it's a user-created command.
 
@@ -124,13 +154,21 @@ Note: If automatic updates fail, you can always run the installer again to get t
 
 ## Updating from Previous Versions
 
-Regardless of which version you have installed, simply run:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.sh | bash
+### Windows
+```powershell
+curl -o install.py https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.py
+python install.py
 ```
 
-The installer will handle migration and updates automatically.
+### macOS/Linux
+```bash
+# Using shell installer
+curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.sh | bash
+# Or using Python installer
+curl -fsSL https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/install.py | python3
+```
+
+The installer will automatically detect and migrate existing installations.
 
 ## Troubleshooting
 
@@ -147,9 +185,11 @@ If documentation seems outdated:
 3. Check if GitHub Actions are running: [View Actions](https://github.com/ericbuess/claude-code-docs/actions)
 
 ### Installation errors
-- **"git/jq/curl not found"**: Install the missing tool first
+- **"Python is not installed"**: Install Python 3.7+ from https://www.python.org/downloads/
+- **"Git not found"**: Install Git from https://git-scm.com/downloads
 - **"Failed to clone repository"**: Check your internet connection
-- **"Failed to update settings.json"**: Check file permissions on `~/.claude/settings.json`
+- **"Failed to update settings.json"**: Check file permissions on `~/.claude/settings.json` (or `%USERPROFILE%\.claude\settings.json` on Windows)
+- **Windows: "python not recognized"**: Ensure Python is added to PATH during installation
 
 ## Uninstalling
 
@@ -159,8 +199,18 @@ To completely remove the docs integration:
 /docs uninstall
 ```
 
-Or run:
+Or run directly:
+
+**Windows:**
+```powershell
+python %USERPROFILE%\.claude-code-docs\uninstall.py
+# Or double-click uninstall.bat in the installation directory
+```
+
+**macOS/Linux:**
 ```bash
+python ~/.claude-code-docs/uninstall.py
+# Or use the shell script if it exists:
 ~/.claude-code-docs/uninstall.sh
 ```
 
@@ -179,7 +229,14 @@ See [UNINSTALL.md](UNINSTALL.md) for manual uninstall instructions.
 
 ## What's New
 
-### v0.3.3 (Latest)
+### v0.4.0 (Latest)
+- 🪟 **Windows Support**: Full Windows compatibility with Python-based implementation
+- 🐍 **Cross-platform**: Unified Python codebase for all platforms
+- 🔧 **New installers**: Python-based install.py, uninstall.py, and helper scripts
+- 📦 **Batch wrappers**: Windows .bat files for easy double-click installation
+- 🔄 **Backward compatible**: Existing macOS/Linux installations continue to work
+
+### v0.3.3
 - Added Claude Code changelog integration (`/docs changelog`)
 - Fixed shell compatibility for macOS users (zsh/bash)
 - Improved documentation and error messages
@@ -194,7 +251,7 @@ See [UNINSTALL.md](UNINSTALL.md) for manual uninstall instructions.
 
 **Contributions are welcome!** This is a community project and we'd love your help:
 
-- 🪟 **Windows Support**: Want to help add Windows compatibility? [Fork the repository](https://github.com/ericbuess/claude-code-docs/fork) and submit a PR!
+- ✅ **Windows Support**: Now available! Help us test and improve it
 - 🐛 **Bug Reports**: Found something not working? [Open an issue](https://github.com/ericbuess/claude-code-docs/issues)
 - 💡 **Feature Requests**: Have an idea? [Start a discussion](https://github.com/ericbuess/claude-code-docs/issues)
 - 📝 **Documentation**: Help improve docs or add examples
