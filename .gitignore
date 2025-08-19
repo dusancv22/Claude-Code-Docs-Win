@@ -32,3 +32,6 @@ test_*.txt
 test_*.md
 *.test
 *.tmp
+
+# Generated files
+PROJECT_INDEX.json
