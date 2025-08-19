@@ -105,8 +105,8 @@
     "mcp.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/mcp.md",
-      "hash": "899b30c745ea34d6dfef67566de8844a184196cc80c2b1f0de78fb7a4d4eae00",
-      "last_updated": "2025-08-18T18:02:11.340552"
+      "hash": "c7ee422e5476da66d568679d061ea68fcaef48a26b459fe6bf5f831b23546620",
+      "last_updated": "2025-08-19T21:19:08.109371"
     },
     "memory.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/memory",
@@ -207,8 +207,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-08-19T18:28:14.486169",
-    "fetch_duration_seconds": 17.894142,
+    "last_fetch_completed": "2025-08-19T21:19:16.346041",
+    "fetch_duration_seconds": 18.146814,
     "total_pages_discovered": 33,
     "pages_fetched_successfully": 34,
     "pages_failed": 0,
@@ -218,7 +218,7 @@
     "total_files": 34,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-08-19T18:28:14.486199",
+  "last_updated": "2025-08-19T21:19:16.346069",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
