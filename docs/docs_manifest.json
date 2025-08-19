@@ -153,14 +153,14 @@
     "settings.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/settings",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/settings.md",
-      "hash": "dad6ca1bd5a0e881886fbd15e3d1cd349c3bbbdcc139b65cd21e9697885cde53",
-      "last_updated": "2025-08-14T18:02:18.943067"
+      "hash": "fff4d53bb9f29aa673ea1a4befffeb4700c6d48fd22c06ed59738b9b3d7c1fac",
+      "last_updated": "2025-08-19T12:35:02.430474"
     },
     "setup.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/setup",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/setup.md",
-      "hash": "e1f2e3ff68552ed05704ea4e0ecc69ae5a9f9b9a4e6313e360fce4555931c8a7",
-      "last_updated": "2025-08-13T15:14:32.598352"
+      "hash": "576fcbc79d36ef32b8fc70bd488d1297d714fbf422265692a7ab233b9d869623",
+      "last_updated": "2025-08-19T12:35:02.956251"
     },
     "slash-commands.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/slash-commands",
@@ -195,20 +195,20 @@
     "troubleshooting.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/troubleshooting",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/troubleshooting.md",
-      "hash": "6ee1a02bbe287e8e92c9c6352a66411e510e4f28b446c51d1e10305babb35c9c",
-      "last_updated": "2025-08-14T18:02:24.761370"
+      "hash": "37ac345e1928b67a1721e356c43b194c39e3ded2c2dc04785c861f537d92b70e",
+      "last_updated": "2025-08-19T12:35:06.096894"
     },
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
-      "hash": "ffd8add8ef2bef5044d5ad324ce7d8a9558f7563ea1ae57245fb5d6ec693df82",
-      "last_updated": "2025-08-18T21:01:33.913373",
+      "hash": "e802058a2c060e58157691ae6ef4db8edddd3fba0c5151053fbb5b36baa6e12c",
+      "last_updated": "2025-08-19T12:35:06.145259",
       "source": "claude-code-repository"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-08-18T21:01:33.913398",
-    "fetch_duration_seconds": 18.131454,
+    "last_fetch_completed": "2025-08-19T12:35:06.145271",
+    "fetch_duration_seconds": 17.821062,
     "total_pages_discovered": 33,
     "pages_fetched_successfully": 34,
     "pages_failed": 0,
@@ -218,9 +218,9 @@
     "total_files": 34,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-08-18T21:01:33.913422",
-  "base_url": "https://raw.githubusercontent.com/ericbuess/claude-code-docs/main/docs/",
-  "github_repository": "ericbuess/claude-code-docs",
+  "last_updated": "2025-08-19T12:35:06.145285",
+  "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
+  "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
   "description": "Claude Code documentation manifest. Keys are filenames, append to base_url for full URL."
 }
