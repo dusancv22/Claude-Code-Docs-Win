@@ -81,8 +81,8 @@
     "ide-integrations.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations.md",
-      "hash": "be68576e071d567e346a24b74179b49141bab82a5eebba4cce435a9b059f8b8a",
-      "last_updated": "2025-07-31T03:30:22.327979"
+      "hash": "8eeb41ded01f5411202a7bf0d28856cecbad5d17039ee09930b8961b9b86d47d",
+      "last_updated": "2025-08-23T21:17:34.017311"
     },
     "interactive-mode.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/interactive-mode",
@@ -195,8 +195,8 @@
     "troubleshooting.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/troubleshooting",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/troubleshooting.md",
-      "hash": "5893f01fd30bb019501c95d18a2cfd7236c5bf252591dc1901978a2f0722312b",
-      "last_updated": "2025-08-22T18:30:12.502615"
+      "hash": "81f3ba7936c8e03bb30beb5efdf880098572bd59564ecba669136983548bd473",
+      "last_updated": "2025-08-23T21:17:45.088566"
     },
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
@@ -207,8 +207,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-08-23T18:26:45.995885",
-    "fetch_duration_seconds": 17.787093,
+    "last_fetch_completed": "2025-08-23T21:17:45.131171",
+    "fetch_duration_seconds": 19.404422,
     "total_pages_discovered": 33,
     "pages_fetched_successfully": 34,
     "pages_failed": 0,
@@ -218,7 +218,7 @@
     "total_files": 34,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-08-23T18:26:45.995919",
+  "last_updated": "2025-08-23T21:17:45.131201",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
