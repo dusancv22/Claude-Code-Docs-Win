@@ -122,6 +122,14 @@ For details, see [Vertex IAM documentation](https://cloud.google.com/vertex-ai/d
   We recommend creating a dedicated GCP project for Claude Code to simplify cost tracking and access control.
 </Note>
 
+### 1M token context window
+
+Claude Sonnet 4 supports the [1M token context window](/en/docs/build-with-claude/context-windows#1m-token-context-window) on Vertex AI.
+
+<Note>
+  The 1M token context window is currently in beta. To use the extended context window, include the `context-1m-2025-08-07` beta header in your Vertex AI requests.
+</Note>
+
 ## Troubleshooting
 
 If you encounter quota issues:

@@ -57,8 +57,8 @@
     "google-vertex-ai.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/google-vertex-ai",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/google-vertex-ai.md",
-      "hash": "34ba33f4720c1bbe41397e686a7fd402681eaacb676626555febdc4ea206b633",
-      "last_updated": "2025-08-26T21:18:03.394007"
+      "hash": "a9ed91f61818cb0c96bbb725da50d736df7ee2c7504efc7523c406a80a68f387",
+      "last_updated": "2025-08-27T01:39:08.168765"
     },
     "hooks.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/hooks",
@@ -219,14 +219,14 @@
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
-      "hash": "052cda67dee8a311780d7cfbc4f3332f5d53ebf6ec4d69a3b1d05fb62f58985a",
-      "last_updated": "2025-08-25T03:47:58.860338",
+      "hash": "bfbe65301413d93d18fa437ccc70ec0c2ab9e0078464e860f71c41ee700fd8a0",
+      "last_updated": "2025-08-27T01:39:22.146482",
       "source": "claude-code-repository"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-08-26T21:18:17.142220",
-    "fetch_duration_seconds": 19.165354,
+    "last_fetch_completed": "2025-08-27T01:39:22.146510",
+    "fetch_duration_seconds": 19.447587,
     "total_pages_discovered": 36,
     "pages_fetched_successfully": 37,
     "pages_failed": 0,
@@ -236,7 +236,7 @@
     "total_files": 37,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-08-26T21:18:17.142243",
+  "last_updated": "2025-08-27T01:39:22.146538",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",

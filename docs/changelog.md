@@ -8,6 +8,10 @@
 
 # Changelog
 
+## 1.0.93
+
+- Windows: Add alt + v shortcut for pasting images from clipboard
+
 ## 1.0.90
 
 - Settings file changes take effect immediately - no restart required
