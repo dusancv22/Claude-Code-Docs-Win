@@ -75,8 +75,8 @@
     "iam.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/iam",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/iam.md",
-      "hash": "a6e3be6da0eda9a81bb38a351fa3bc2af95402688995186e1e9deb758077753b",
-      "last_updated": "2025-08-26T21:18:04.961936"
+      "hash": "43d29a41e580ef96176752e019d1371a189602b91212e83e7551930219a6acff",
+      "last_updated": "2025-09-02T18:27:08.992808"
     },
     "ide-integrations.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
@@ -231,8 +231,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-02T15:22:05.791657",
-    "fetch_duration_seconds": 19.779675,
+    "last_fetch_completed": "2025-09-02T18:27:21.712719",
+    "fetch_duration_seconds": 19.789041,
     "total_pages_discovered": 37,
     "pages_fetched_successfully": 38,
     "pages_failed": 0,
@@ -242,7 +242,7 @@
     "total_files": 38,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-02T15:22:05.791694",
+  "last_updated": "2025-09-02T18:27:21.712752",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
