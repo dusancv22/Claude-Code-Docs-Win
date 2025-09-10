@@ -153,8 +153,8 @@
     "sdk__sdk-headless.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/sdk-headless",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/sdk-headless.md",
-      "hash": "075878969c9bc428ba1e5217b0b0cea3c740421c4814dcdc0c9c8cecc44de4e1",
-      "last_updated": "2025-08-26T15:22:23.480422"
+      "hash": "a3887800ab82e9ab880fd88161c150aa140563282a539954a389c48a6d3b101d",
+      "last_updated": "2025-09-10T18:28:59.787400"
     },
     "sdk__sdk-overview.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/sdk-overview",
@@ -237,8 +237,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-10T15:20:44.243411",
-    "fetch_duration_seconds": 21.754223,
+    "last_fetch_completed": "2025-09-10T18:29:06.192500",
+    "fetch_duration_seconds": 20.43228,
     "total_pages_discovered": 38,
     "pages_fetched_successfully": 39,
     "pages_failed": 0,
@@ -248,7 +248,7 @@
     "total_files": 39,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-10T15:20:44.243457",
+  "last_updated": "2025-09-10T18:29:06.192525",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
