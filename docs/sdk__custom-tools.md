@@ -80,6 +80,10 @@ Use the `createSdkMcpServer` and `tool` helper functions to define type-safe cus
 
 Pass the custom server to the `query` function via the `mcpServers` option as a dictionary/object.
 
+<Note>
+  **Important:** Custom MCP tools require streaming input mode. You must use an async generator/iterable for the `prompt` parameter - a simple string will not work with MCP servers.
+</Note>
+
 ### Tool Name Format
 
 When MCP tools are exposed to Claude, their names follow a specific format:
@@ -95,9 +99,19 @@ You can control which tools Claude can use via the `allowedTools` option:
   ```typescript TypeScript
   import { query } from "@anthropic-ai/claude-code";
 
-  // Use the custom tools in your query
+  // Use the custom tools in your query with streaming input
+  async function* generateMessages() {
+    yield {
+      type: "user" as const,
+      message: {
+        role: "user" as const,
+        content: "What's the weather in San Francisco?"
+      }
+    };
+  }
+
   for await (const message of query({
-    prompt: "What's the weather in San Francisco?",
+    prompt: generateMessages(),  // Use async generator for streaming input
     options: {
       mcpServers: {
         "my-custom-tools": customServer  // Pass as object/dictionary, not array
@@ -119,23 +133,30 @@ You can control which tools Claude can use via the `allowedTools` option:
   ```python Python
   from claude_code_sdk import ClaudeSDKClient, ClaudeCodeOptions
 
-  # Use the custom tools in your query
-  options = ClaudeCodeOptions(
-      mcp_servers={"my-custom-tools": custom_server},  # Pass as dict, not list
-      # Optionally specify which tools Claude can use
-      allowed_tools=[
-          "mcp__my-custom-tools__get_weather",  # Allow the weather tool
-          # Add other tools as needed
-      ],
-      max_turns=3
-  )
+  # Use the custom tools in your query with streaming input
+  async def message_generator():
+      yield {
+          "type": "user",
+          "message": {
+              "role": "user",
+              "content": "What's the weather in San Francisco?"
+          }
+      }
 
-  async with ClaudeSDKClient(options=options) as client:
-      await client.query("What's the weather in San Francisco?")
-      
-      # Extract and print response
-      async for msg in client.receive_response():
-          print(msg)
+  async for message in query(
+      prompt=message_generator(),  # Use async generator for streaming input
+      options=ClaudeCodeOptions(
+          mcp_servers={"my-custom-tools": custom_server},  # Pass as dict, not list
+          # Optionally specify which tools Claude can use
+          allowed_tools=[
+              "mcp__my-custom-tools__get_weather",  # Allow the weather tool
+              # Add other tools as needed
+          ],
+          max_turns=3
+      )
+  ):
+      if hasattr(message, 'result'):
+          print(message.result)
   ```
 </CodeGroup>
 
@@ -155,9 +176,19 @@ When your MCP server has multiple tools, you can selectively allow them:
     ]
   });
 
-  // Allow only specific tools
+  // Allow only specific tools with streaming input
+  async function* generateMessages() {
+    yield {
+      type: "user" as const,
+      message: {
+        role: "user" as const,
+        content: "Calculate 5 + 3 and translate 'hello' to Spanish"
+      }
+    };
+  }
+
   for await (const message of query({
-    prompt: "Calculate 5 + 3 and translate 'hello' to Spanish",
+    prompt: generateMessages(),  // Use async generator for streaming input
     options: {
       mcpServers: {
         utilities: multiToolServer
@@ -198,22 +229,29 @@ When your MCP server has multiple tools, you can selectively allow them:
       tools=[calculate, translate, search_web]  # Pass decorated functions
   )
 
-  # Allow only specific tools
-  options = ClaudeCodeOptions(
-      mcp_servers={"utilities": multi_tool_server},
-      allowed_tools=[
-          "mcp__utilities__calculate",   # Allow calculator
-          "mcp__utilities__translate",   # Allow translator
-          # "mcp__utilities__search_web" is NOT allowed
-      ]
-  )
+  # Allow only specific tools with streaming input
+  async def message_generator():
+      yield {
+          "type": "user",
+          "message": {
+              "role": "user",
+              "content": "Calculate 5 + 3 and translate 'hello' to Spanish"
+          }
+      }
 
-  async with ClaudeSDKClient(options=options) as client:
-      await client.query("Calculate 5 + 3 and translate 'hello' to Spanish")
-      
-      # Extract and print response
-      async for msg in client.receive_response():
-          print(msg)
+  async for message in query(
+      prompt=message_generator(),  # Use async generator for streaming input
+      options=ClaudeCodeOptions(
+          mcp_servers={"utilities": multi_tool_server},
+          allowed_tools=[
+              "mcp__utilities__calculate",   # Allow calculator
+              "mcp__utilities__translate",   # Allow translator
+              # "mcp__utilities__search_web" is NOT allowed
+          ]
+      )
+  ):
+      if hasattr(message, 'result'):
+          print(message.result)
   ```
 </CodeGroup>
 

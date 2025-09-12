@@ -153,8 +153,8 @@
     "sdk__custom-tools.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/custom-tools",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/custom-tools.md",
-      "hash": "3e6e3899afe967c87f77822f6268daea1cd6374f1ef2fa1d827913d57b92f11c",
-      "last_updated": "2025-09-12T18:25:05.367382"
+      "hash": "7cb3754f5c50f5868eea8f27f285551f6fe194d860be433926d5308906572504",
+      "last_updated": "2025-09-12T21:16:45.848218"
     },
     "sdk__modifying-system-prompts.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/modifying-system-prompts",
@@ -297,8 +297,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-12T18:25:16.967708",
-    "fetch_duration_seconds": 26.164611,
+    "last_fetch_completed": "2025-09-12T21:16:57.566658",
+    "fetch_duration_seconds": 25.906022,
     "total_pages_discovered": 48,
     "pages_fetched_successfully": 49,
     "pages_failed": 0,
@@ -308,7 +308,7 @@
     "total_files": 49,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-12T18:25:16.967731",
+  "last_updated": "2025-09-12T21:16:57.566688",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
