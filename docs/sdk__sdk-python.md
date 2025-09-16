@@ -750,7 +750,7 @@ HookCallback = Callable[
 
 Parameters:
 
-* `input_data`: Hook-specific input data (see [hook documentation](https://docs.anthropic.com/en/docs/claude-code/hooks#hook-input))
+* `input_data`: Hook-specific input data (see [hook documentation](https://docs.claude.com/en/docs/claude-code/hooks#hook-input))
 * `tool_use_id`: Optional tool use identifier (for tool-related hooks)
 * `context`: Hook context with additional information
 

@@ -82,7 +82,7 @@ We encourage either writing your own MCP servers or using MCP servers from provi
 
 ## IDE security
 
-See [here](https://docs.anthropic.com/en/docs/claude-code/ide-integrations#security) for more information on the security of running Claude Code in an IDE.
+See [here](/en/docs/claude-code/ide-integrations#security) for more information on the security of running Claude Code in an IDE.
 
 ## Security best practices
 

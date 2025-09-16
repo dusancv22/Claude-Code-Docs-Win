@@ -35,7 +35,7 @@ In addition, Claude Code provides dedicated integrations for popular IDEs, which
   </Tab>
 
   <Tab title="JetBrains">
-    To install Claude Code on JetBrains IDEs like IntelliJ, PyCharm, Android Studio, WebStorm, PhpStorm and GoLand, find and install the [Claude Code plugin](https://docs.anthropic.com/s/claude-code-jetbrains) from the marketplace and restart your IDE.
+    To install Claude Code on JetBrains IDEs like IntelliJ, PyCharm, Android Studio, WebStorm, PhpStorm and GoLand, find and install the [Claude Code plugin](/s/claude-code-jetbrains) from the marketplace and restart your IDE.
 
     <Note>
       The plugin may also be auto-installed when you run `claude` in the integrated terminal. The IDE must be restarted completely to take effect.

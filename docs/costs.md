@@ -25,15 +25,15 @@ Total code changes:    0 lines added, 0 lines removed
 
 ### Additional tracking options
 
-Check [historical usage](https://support.anthropic.com/en/articles/9534590-cost-and-usage-reporting-in-console) in the Anthropic Console (requires Admin or Billing role) and set [workspace spend limits](https://support.anthropic.com/en/articles/9796807-creating-and-managing-workspaces) for the Claude Code workspace (requires Admin role).
+Check [historical usage](https://support.claude.com/en/articles/9534590-cost-and-usage-reporting-in-console) in the Claude Console (requires Admin or Billing role) and set [workspace spend limits](https://support.claude.com/en/articles/9796807-creating-and-managing-workspaces) for the Claude Code workspace (requires Admin role).
 
 <Note>
-  When you first authenticate Claude Code with your Anthropic Console account, a workspace called "Claude Code" is automatically created for you. This workspace provides centralized cost tracking and management for all Claude Code usage in your organization.
+  When you first authenticate Claude Code with your Claude Console account, a workspace called "Claude Code" is automatically created for you. This workspace provides centralized cost tracking and management for all Claude Code usage in your organization.
 </Note>
 
 ## Managing costs for teams
 
-When using Anthropic API, you can limit the total Claude Code workspace spend. To configure, [follow these instructions](https://support.anthropic.com/en/articles/9796807-creating-and-managing-workspaces). Admins can view cost and usage reporting by [following these instructions](https://support.anthropic.com/en/articles/9534590-cost-and-usage-reporting-in-console).
+When using Claude API, you can limit the total Claude Code workspace spend. To configure, [follow these instructions](https://support.claude.com/en/articles/9796807-creating-and-managing-workspaces). Admins can view cost and usage reporting by [following these instructions](https://support.claude.com/en/articles/9534590-cost-and-usage-reporting-in-console).
 
 On Bedrock and Vertex, Claude Code does not send metrics from your cloud. In order to get cost metrics, several large enterprises reported using [LiteLLM](/en/docs/claude-code/bedrock-vertex-proxies#litellm), which is an open-source tool that helps companies [track spend by key](https://docs.litellm.ai/docs/proxy/virtual_keys#tracking-spend). This project is unaffiliated with Anthropic and we have not audited its security.
 

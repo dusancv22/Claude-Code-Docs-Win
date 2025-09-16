@@ -7,7 +7,7 @@
 Prerequisites:
 
 * [Node.js 18 or newer](https://nodejs.org/en/download/)
-* A [Claude.ai](https://claude.ai) (recommended) or [Anthropic Console](https://console.anthropic.com/) account
+* A [Claude.ai](https://claude.ai) (recommended) or [Claude Console](https://console.anthropic.com/) account
 
 ```bash
 # Install Claude Code
@@ -37,7 +37,7 @@ That's it! You're ready to start coding with Claude. [Continue with Quickstart (
 * **Works in your terminal**: Not another chat window. Not another IDE. Claude Code meets you where you already work, with the tools you already love.
 * **Takes action**: Claude Code can directly edit files, run commands, and create commits. Need more? [MCP](/en/docs/claude-code/mcp) lets Claude read your design docs in Google Drive, update your tickets in Jira, or use *your* custom developer tooling.
 * **Unix philosophy**: Claude Code is composable and scriptable. `tail -f app.log | claude -p "Slack me if you see any anomalies appear in this log stream"` *works*. Your CI can run `claude -p "If there are new text strings, translate them into French and raise a PR for @lang-fr-team to review"`.
-* **Enterprise-ready**: Use Anthropic's API, or host on AWS or GCP. Enterprise-grade [security](/en/docs/claude-code/security), [privacy](/en/docs/claude-code/data-usage), and [compliance](https://trust.anthropic.com/) is built-in.
+* **Enterprise-ready**: Use the Claude API, or host on AWS or GCP. Enterprise-grade [security](/en/docs/claude-code/security), [privacy](/en/docs/claude-code/data-usage), and [compliance](https://trust.anthropic.com/) is built-in.
 
 ## Next steps
 

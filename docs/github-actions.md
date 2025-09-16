@@ -39,7 +39,7 @@ This command will guide you through setting up the GitHub app and required secre
 
 <Note>
   * You must be a repository admin to install the GitHub app and add secrets -
-    This quickstart method is only available for direct Anthropic API users. If
+    This quickstart method is only available for direct Claude API users. If
     you're using AWS Bedrock or Google Vertex AI, please see the [Using with AWS
     Bedrock & Google Vertex AI](#using-with-aws-bedrock-%26-google-vertex-ai)
     section.
@@ -228,7 +228,7 @@ When using Claude Code GitHub Actions, be aware of the associated costs:
 
 * Each Claude interaction consumes API tokens based on the length of prompts and responses
 * Token usage varies by task complexity and codebase size
-* See [Claude's pricing page](https://www.anthropic.com/api) for current token rates
+* See [Claude's pricing page](https://claude.com/platform/api) for current token rates
 
 **Cost optimization tips:**
 
@@ -318,7 +318,7 @@ Before setting up Claude Code GitHub Actions with cloud providers, you need:
       This app will be used with the [actions/create-github-app-token](https://github.com/actions/create-github-app-token) action to generate authentication tokens in your workflows.
     </Note>
 
-    **Alternative for Anthropic API or if you don't want to setup your own Github app**: Use the official Anthropic app:
+    **Alternative for Claude API or if you don't want to setup your own Github app**: Use the official Anthropic app:
 
     1. Install from: [https://github.com/apps/claude](https://github.com/apps/claude)
     2. No additional configuration needed for authentication
@@ -408,10 +408,10 @@ Before setting up Claude Code GitHub Actions with cloud providers, you need:
   <Step title="Add Required Secrets">
     Add the following secrets to your repository (Settings → Secrets and variables → Actions):
 
-    #### For Anthropic API (Direct):
+    #### For Claude API (Direct):
 
     1. **For API Authentication**:
-       * `ANTHROPIC_API_KEY`: Your Anthropic API key from [console.anthropic.com](https://console.anthropic.com)
+       * `ANTHROPIC_API_KEY`: Your Claude API key from [console.anthropic.com](https://console.anthropic.com)
 
     2. **For GitHub App (if using your own app)**:
        * `APP_ID`: Your GitHub App's ID
@@ -613,14 +613,14 @@ The Claude Code Action v1 uses a simplified configuration:
 | ------------------- | ----------------------------------------------- | -------- |
 | `prompt`            | Instructions for Claude (text or slash command) | No\*     |
 | `claude_args`       | CLI arguments passed to Claude Code             | No       |
-| `anthropic_api_key` | Anthropic API key                               | Yes\*\*  |
+| `anthropic_api_key` | Claude API key                                  | Yes\*\*  |
 | `github_token`      | GitHub token for API access                     | No       |
 | `trigger_phrase`    | Custom trigger phrase (default: "@claude")      | No       |
-| `use_bedrock`       | Use AWS Bedrock instead of Anthropic API        | No       |
-| `use_vertex`        | Use Google Vertex AI instead of Anthropic API   | No       |
+| `use_bedrock`       | Use AWS Bedrock instead of Claude API           | No       |
+| `use_vertex`        | Use Google Vertex AI instead of Claude API      | No       |
 
 \*Prompt is optional - when omitted for issue/PR comments, Claude responds to trigger phrase\
-\*\*Required for direct Anthropic API, not for Bedrock/Vertex
+\*\*Required for direct Claude API, not for Bedrock/Vertex
 
 #### Using claude\_args
 

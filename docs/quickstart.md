@@ -10,7 +10,7 @@ Make sure you have:
 
 * A terminal or command prompt open
 * A code project to work with
-* A [Claude.ai](https://claude.ai) (recommended) or [Anthropic Console](https://console.anthropic.com/) account
+* A [Claude.ai](https://claude.ai) (recommended) or [Claude Console](https://console.anthropic.com/) account
 
 ## Step 1: Install Claude Code
 
@@ -63,12 +63,12 @@ claude
 You can log in using either account type:
 
 * [Claude.ai](https://claude.ai) (subscription plans - recommended)
-* [Anthropic Console](https://console.anthropic.com/) (API access with pre-paid credits)
+* [Claude Console](https://console.anthropic.com/) (API access with pre-paid credits)
 
 Once logged in, your credentials are stored and you won't need to log in again.
 
 <Note>
-  When you first authenticate Claude Code with your Anthropic Console account, a workspace called "Claude Code" is automatically created for you. This workspace provides centralized cost tracking and management for all Claude Code usage in your organization.
+  When you first authenticate Claude Code with your Claude Console account, a workspace called "Claude Code" is automatically created for you. This workspace provides centralized cost tracking and management for all Claude Code usage in your organization.
 </Note>
 
 <Note>
