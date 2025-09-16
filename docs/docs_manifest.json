@@ -213,8 +213,8 @@
     "sdk__sdk-typescript.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/sdk-typescript",
       "original_md_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/sdk-typescript.md",
-      "hash": "fd03a7987cb8cbc6e06581a7979349443f909d6926197f5448276852781fb6ed",
-      "last_updated": "2025-09-12T18:25:10.635234"
+      "hash": "6ebef3fc21bb7bf4d9bb883a7cec5df6beb55014c04b38fd963be476b20479e2",
+      "last_updated": "2025-09-16T15:21:52.065897"
     },
     "sdk__streaming-vs-single-mode.md": {
       "original_url": "https://docs.anthropic.com/en/docs/claude-code/sdk/streaming-vs-single-mode",
@@ -297,8 +297,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-16T12:41:52.480919",
-    "fetch_duration_seconds": 26.008621,
+    "last_fetch_completed": "2025-09-16T15:21:58.593078",
+    "fetch_duration_seconds": 30.017858,
     "total_pages_discovered": 48,
     "pages_fetched_successfully": 49,
     "pages_failed": 0,
@@ -308,7 +308,7 @@
     "total_files": 49,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-16T12:41:52.480945",
+  "last_updated": "2025-09-16T15:21:58.593104",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",

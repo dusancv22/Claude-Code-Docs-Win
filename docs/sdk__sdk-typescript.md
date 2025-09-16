@@ -99,7 +99,7 @@ Configuration object for the `query()` function.
 | `includePartialMessages`     | `boolean`                                                                                         | `false`                 | Include partial message events              |
 | `maxThinkingTokens`          | `number`                                                                                          | `undefined`             | Maximum tokens for thinking process         |
 | `maxTurns`                   | `number`                                                                                          | `undefined`             | Maximum conversation turns                  |
-| `mcpServers`                 | `Record<string, `[`McpServerConfig`](#mcpserverconfig)`>`                                         | `{}`                    | MCP server configurations                   |
+| `mcpServers`                 | `Record<string, [`McpServerConfig`](#mcpserverconfig)>`                                           | `{}`                    | MCP server configurations                   |
 | `model`                      | `string`                                                                                          | Default from CLI        | Claude model to use                         |
 | `pathToClaudeCodeExecutable` | `string`                                                                                          | Auto-detected           | Path to Claude Code executable              |
 | `permissionMode`             | [`PermissionMode`](#permissionmode)                                                               | `'default'`             | Permission mode for the session             |
