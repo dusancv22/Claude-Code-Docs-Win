@@ -90,6 +90,52 @@ Claude Code maintains command history for the current session:
 * **Ctrl+R**: Reverse search through history (if supported by terminal)
 * **Note**: History expansion (`!`) is disabled by default
 
+## Background bash commands
+
+Claude Code supports running bash commands in the background, allowing you to continue working while long-running processes execute.
+
+### How backgrounding works
+
+When Claude Code runs a command in the background, it runs the command runs asynchronously and returns immediately with a background task ID. Claude Code can respond to new prompts while the command continues executing in the background.
+
+To run commands in the background, you can either:
+
+* Prompt Claude Code to run a command in the background
+* Press Ctrl+B to move a regular Bash tool invocation to the background. (Tmux users must press Ctrl+B twice due to tmux's prefix key.)
+
+**Key features:**
+
+* Output is buffered and Claude can retrieve it using the BashOutput tool
+* Background tasks have unique IDs for tracking and output retrieval
+* Background tasks are automatically cleaned up when Claude Code exits
+
+**Common backgrounded commands:**
+
+* Build tools (webpack, vite, make)
+* Package managers (npm, yarn, pnpm)
+* Test runners (jest, pytest)
+* Development servers
+* Long-running processes (docker, terraform)
+
+### Bash mode with `!` prefix
+
+Run bash commands directly without going through Claude by prefixing your input with `!`:
+
+```bash
+! npm test
+! git status
+! ls -la
+```
+
+Bash mode:
+
+* Adds the command and its output to the conversation context
+* Shows real-time progress and output
+* Supports the same `Ctrl+B` backgrounding for long-running commands
+* Does not require Claude to interpret or approve the command
+
+This is useful for quick shell operations while maintaining conversation context.
+
 ## See also
 
 * [Slash commands](/en/docs/claude-code/slash-commands) - Interactive session commands
