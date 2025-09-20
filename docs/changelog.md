@@ -8,6 +8,10 @@
 
 # Changelog
 
+## 1.0.120
+
+- Fix input lag during typing, especially noticeable with large prompts
+
 ## 1.0.119
 
 - Fix Windows issue where process visually freezes on entering interactive mode
