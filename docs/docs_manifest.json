@@ -201,8 +201,8 @@
     "sdk__sdk-sessions.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-sessions",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-sessions.md",
-      "hash": "22f08be0fb8b14c6e70750eeccb2aae26697213faeff96518e04468c8c1acd73",
-      "last_updated": "2025-09-12T18:25:09.586360"
+      "hash": "2351ccebbba45d481cb08250638339847db6765155728a75959b45388be2e150",
+      "last_updated": "2025-09-22T18:28:06.134427"
     },
     "sdk__sdk-slash-commands.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-slash-commands",
@@ -297,8 +297,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-22T15:22:23.480645",
-    "fetch_duration_seconds": 25.849982,
+    "last_fetch_completed": "2025-09-22T18:28:13.732595",
+    "fetch_duration_seconds": 26.551542,
     "total_pages_discovered": 48,
     "pages_fetched_successfully": 49,
     "pages_failed": 0,
@@ -308,7 +308,7 @@
     "total_files": 49,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-22T15:22:23.480672",
+  "last_updated": "2025-09-22T18:28:13.732625",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
