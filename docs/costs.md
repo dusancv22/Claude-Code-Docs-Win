@@ -87,13 +87,11 @@ Costs can vary significantly based on:
 * Number of files being searched or modified
 * Length of conversation history
 * Frequency of compacting conversations
-* Background processes (haiku generation, conversation summarization)
 
 ## Background token usage
 
 Claude Code uses tokens for some background functionality even when idle:
 
-* **Haiku generation**: Small creative messages that appear while you type (approximately 1 cent per day)
 * **Conversation summarization**: Background jobs that summarize previous conversations for the `claude --resume` feature
 * **Command processing**: Some commands like `/cost` may generate requests to check status
 

@@ -170,7 +170,7 @@ Automatically fix missing language tags and formatting issues in markdown files:
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/markdown_formatter.py"
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/markdown_formatter.py"
           }
         ]
       }

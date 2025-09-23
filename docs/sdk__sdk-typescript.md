@@ -1692,7 +1692,6 @@ class AbortError extends Error {}
 
 ## See also
 
-* [TypeScript SDK guide](/en/docs/claude-code/sdk/sdk-typescript) - Tutorial and examples
 * [SDK overview](/en/docs/claude-code/sdk/sdk-overview) - General SDK concepts
 * [Python SDK reference](/en/docs/claude-code/sdk/sdk-python) - Python SDK documentation
 * [CLI reference](/en/docs/claude-code/cli-reference) - Command-line interface
