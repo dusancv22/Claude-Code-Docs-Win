@@ -528,6 +528,8 @@ Permission rules follow the pattern: `ToolName(pattern)`
 * **File rules**: Support glob patterns. Example: `Read(./src/**/*.ts)` matches TypeScript files in src
 * **Tool-only rules**: Omit parentheses to control entire tools. Example: `WebFetch` blocks all web fetches
 
+For more information on configuring permissions, see [Configuring permissions](/en/docs/claude-code/iam#configuring-permissions).
+
 ### Using with SDK
 
 While rules cannot be set programtically in the SDK yet, they will be read from the settings.json file in the path that the SDK is loaded in.
@@ -551,7 +553,9 @@ Example of how bash patterns work:
 
 * `Bash(git:*)` - Matches any git command
 * `Bash(npm run test)` - Matches exact command
-* `Bash(npm run test:*)` - Matches npm run test:unit, test:integration, etc.
+* `Bash(npm run test:*)` - Matches Bash commands starting with `npm run test` such as `npm run test anyFile.test.ts`
+
+For more information on configuring permissions, see [Configuring permissions](/en/docs/claude-code/iam#configuring-permissions).
 
 ## Best Practices
 

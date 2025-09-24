@@ -369,35 +369,37 @@ asyncio.run(interruptible_task())
 ```python
 from claude_code_sdk import (
     ClaudeSDKClient,
-    ClaudeCodeOptions,
-    PermissionResultAllow,
-    PermissionResultDeny,
-    ToolPermissionContext
+    ClaudeCodeOptions
 )
 
 async def custom_permission_handler(
     tool_name: str,
     input_data: dict,
-    context: ToolPermissionContext
+    context: dict
 ):
     """Custom logic for tool permissions."""
-    
+
     # Block writes to system directories
     if tool_name == "Write" and input_data.get("file_path", "").startswith("/system/"):
-        return PermissionResultDeny(
-            message="System directory write not allowed",
-            interrupt=True
-        )
-    
+        return {
+            "behavior": "deny",
+            "message": "System directory write not allowed",
+            "interrupt": True
+        }
+
     # Redirect sensitive file operations
     if tool_name in ["Write", "Edit"] and "config" in input_data.get("file_path", ""):
         safe_path = f"./sandbox/{input_data['file_path']}"
-        return PermissionResultAllow(
-            updated_input={**input_data, "file_path": safe_path}
-        )
-    
+        return {
+            "behavior": "allow",
+            "updatedInput": {**input_data, "file_path": safe_path}
+        }
+
     # Allow everything else
-    return PermissionResultAllow()
+    return {
+        "behavior": "allow",
+        "updatedInput": input_data
+    }
 
 async def main():
     options = ClaudeCodeOptions(

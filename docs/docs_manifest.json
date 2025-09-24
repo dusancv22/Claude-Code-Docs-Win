@@ -33,8 +33,8 @@
     "data-usage.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/data-usage",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/data-usage.md",
-      "hash": "80333b3fb38d77da0ed2e9075cfc8c9c698ac6ff9dfc6aa4066878a53fff68eb",
-      "last_updated": "2025-09-23T18:30:19.091120"
+      "hash": "04144c779bce98492c59712fe9626ec7a45f7b005ee32d17f89e68f93a6662b7",
+      "last_updated": "2025-09-24T15:21:08.066998"
     },
     "devcontainer.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/devcontainer",
@@ -165,8 +165,8 @@
     "sdk__sdk-cost-tracking.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-cost-tracking",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-cost-tracking.md",
-      "hash": "fae4d3a5fc7fcb739fa559a0c141074ea7d4caac9ba7120fd24cb569ee5a4af0",
-      "last_updated": "2025-09-24T12:41:51.909293"
+      "hash": "a937c13ea3eff49ad2828a6152578f45a9d621604b5348b5d2cbb7cd356bd3c8",
+      "last_updated": "2025-09-24T15:21:19.579465"
     },
     "sdk__sdk-headless.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-headless",
@@ -189,14 +189,14 @@
     "sdk__sdk-permissions.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-permissions",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-permissions.md",
-      "hash": "ea987bf510050011aaee49aee11d902452de3d31264f2bd24829fad8b4df0111",
-      "last_updated": "2025-09-14T21:16:31.746116"
+      "hash": "7d3a8bc0c781791a08aaa6b805b514cda50075d37a183f01ff5d3764007182fe",
+      "last_updated": "2025-09-24T15:21:21.655429"
     },
     "sdk__sdk-python.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-python",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-python.md",
-      "hash": "60ced07cc7109c2fb399f141dc3316912525714aab39fd75e4f627ab18cfdc3b",
-      "last_updated": "2025-09-16T18:29:37.250987"
+      "hash": "8afe6144c1b73b37ea7e8ba4eae041c82c3891d5d76b611a22d47f8aba96c313",
+      "last_updated": "2025-09-24T15:21:22.186950"
     },
     "sdk__sdk-sessions.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-sessions",
@@ -243,8 +243,8 @@
     "settings.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/settings",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/settings.md",
-      "hash": "ec408fd0035fcd07591e90e8395ed11371d3d45adf6fbf549ec8c2567acc265e",
-      "last_updated": "2025-09-16T18:29:41.513209"
+      "hash": "14768720e693ed704e7ba98992e2b487d3de2faff441133e35029416346f264c",
+      "last_updated": "2025-09-24T15:21:26.369484"
     },
     "setup.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/setup",
@@ -255,8 +255,8 @@
     "slash-commands.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/slash-commands",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/slash-commands.md",
-      "hash": "a92657563011b0d9cf1b59de5c493e3d3cb5f4f1f5aa31ae3a3acf3bd97d7750",
-      "last_updated": "2025-08-27T18:28:52.651424"
+      "hash": "d4cbd2be73f251ff178a0d21980a7b019ebc9ecd0cd6f74eb2adc17c3d86d3b5",
+      "last_updated": "2025-09-24T15:21:27.410694"
     },
     "statusline.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/statusline",
@@ -297,8 +297,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-24T12:42:02.375676",
-    "fetch_duration_seconds": 26.264066,
+    "last_fetch_completed": "2025-09-24T15:21:30.046196",
+    "fetch_duration_seconds": 26.111193,
     "total_pages_discovered": 48,
     "pages_fetched_successfully": 49,
     "pages_failed": 0,
@@ -308,7 +308,7 @@
     "total_files": 49,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-24T12:42:02.375704",
+  "last_updated": "2025-09-24T15:21:30.046221",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
