@@ -165,8 +165,8 @@
     "sdk__sdk-cost-tracking.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-cost-tracking",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-cost-tracking.md",
-      "hash": "a937c13ea3eff49ad2828a6152578f45a9d621604b5348b5d2cbb7cd356bd3c8",
-      "last_updated": "2025-09-24T09:22:03.632094"
+      "hash": "fae4d3a5fc7fcb739fa559a0c141074ea7d4caac9ba7120fd24cb569ee5a4af0",
+      "last_updated": "2025-09-24T12:41:51.909293"
     },
     "sdk__sdk-headless.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sdk/sdk-headless",
@@ -297,8 +297,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-24T09:22:14.084212",
-    "fetch_duration_seconds": 25.775061,
+    "last_fetch_completed": "2025-09-24T12:42:02.375676",
+    "fetch_duration_seconds": 26.264066,
     "total_pages_discovered": 48,
     "pages_fetched_successfully": 49,
     "pages_failed": 0,
@@ -308,7 +308,7 @@
     "total_files": 49,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-24T09:22:14.084241",
+  "last_updated": "2025-09-24T12:42:02.375704",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
