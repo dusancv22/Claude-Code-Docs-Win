@@ -43,20 +43,20 @@ When Claude executes tools, the usage reporting differs based on whether tools a
   ```
 
   ```python Python
-  from claude_code_sdk import query
+  from claude_code_sdk import query, ClaudeCodeOptions, AssistantMessage
+  import asyncio
 
   # Example: Tracking usage in a conversation
-  async def track_usage(message):
-      if message['type'] == 'assistant' and 'usage' in message:
-          print(f"Message ID: {message['id']}")
-          print(f"Usage: {message['usage']}")
+  async def track_usage():
+      # Process messages as they arrive
+      async for message in query(
+          prompt="Analyze this codebase and run tests"
+      ):
+          if isinstance(message, AssistantMessage) and hasattr(message, 'usage'):
+              print(f"Message ID: {message.id}")
+              print(f"Usage: {message.usage}")
 
-  result = await query(
-      prompt="Analyze this codebase and run tests",
-      options={
-          "on_message": track_usage
-      }
-  )
+  asyncio.run(track_usage())
   ```
 </CodeGroup>
 
@@ -187,62 +187,68 @@ Here's a complete example of implementing a cost tracking system:
   ```
 
   ```python Python
-  from claude_code_sdk import query
+  from claude_code_sdk import query, AssistantMessage, ResultMessage
   from datetime import datetime
+  import asyncio
 
   class CostTracker:
       def __init__(self):
           self.processed_message_ids = set()
           self.step_usages = []
-      
+
       async def track_conversation(self, prompt):
-          def on_message(message):
+          result = None
+
+          # Process messages as they arrive
+          async for message in query(prompt=prompt):
               self.process_message(message)
-          
-          result = await query(
-              prompt=prompt,
-              options={"on_message": on_message}
-          )
-          
+
+              # Capture the final result message
+              if isinstance(message, ResultMessage):
+                  result = message
+
           return {
               "result": result,
               "step_usages": self.step_usages,
-              "total_cost": result.get("usage", {}).get("total_cost_usd", 0)
+              "total_cost": result.total_cost_usd if result else 0
           }
-      
+
       def process_message(self, message):
           # Only process assistant messages with usage
-          if message.get("type") != "assistant" or "usage" not in message:
+          if not isinstance(message, AssistantMessage) or not hasattr(message, 'usage'):
               return
-          
+
           # Skip if already processed this message ID
-          message_id = message.get("id")
-          if message_id in self.processed_message_ids:
+          message_id = getattr(message, 'id', None)
+          if not message_id or message_id in self.processed_message_ids:
               return
-          
+
           # Mark as processed and record usage
           self.processed_message_ids.add(message_id)
           self.step_usages.append({
               "message_id": message_id,
               "timestamp": datetime.now().isoformat(),
-              "usage": message["usage"],
-              "cost_usd": self.calculate_cost(message["usage"])
+              "usage": message.usage,
+              "cost_usd": self.calculate_cost(message.usage)
           })
-      
+
       def calculate_cost(self, usage):
           # Implement your pricing calculation
           input_cost = usage.get("input_tokens", 0) * 0.00003
           output_cost = usage.get("output_tokens", 0) * 0.00015
           cache_read_cost = usage.get("cache_read_input_tokens", 0) * 0.0000075
-          
+
           return input_cost + output_cost + cache_read_cost
 
   # Usage
-  tracker = CostTracker()
-  result = await tracker.track_conversation("Analyze and refactor this code")
+  async def main():
+      tracker = CostTracker()
+      result = await tracker.track_conversation("Analyze and refactor this code")
 
-  print(f"Steps processed: {len(result['step_usages'])}")
-  print(f"Total cost: ${result['total_cost']:.4f}")
+      print(f"Steps processed: {len(result['step_usages'])}")
+      print(f"Total cost: ${result['total_cost']:.4f}")
+
+  asyncio.run(main())
   ```
 </CodeGroup>
 
