@@ -27,8 +27,8 @@
     "costs.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/costs",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/costs.md",
-      "hash": "d921f52c69d936c18f4813b50288f47e6b96d99c6f8fc946651557eb5e1f22e1",
-      "last_updated": "2025-09-23T18:30:18.561964"
+      "hash": "02de2c7264de4b28d6ec3e6cd331c54fae4f11ecd704b9300e75aab318498d3d",
+      "last_updated": "2025-09-26T21:16:45.512812"
     },
     "data-usage.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/data-usage",
@@ -297,8 +297,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-26T18:27:42.562243",
-    "fetch_duration_seconds": 54.392517,
+    "last_fetch_completed": "2025-09-26T21:17:08.746124",
+    "fetch_duration_seconds": 26.21067,
     "total_pages_discovered": 48,
     "pages_fetched_successfully": 49,
     "pages_failed": 0,
@@ -308,7 +308,7 @@
     "total_files": 49,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-26T18:27:42.562277",
+  "last_updated": "2025-09-26T21:17:08.746170",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
