@@ -249,14 +249,14 @@
     "setup.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/setup",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/setup.md",
-      "hash": "1f01119bc9acc5ca5c79667ea969ab3a2857e3517605878de02be07c68ffeaec",
-      "last_updated": "2025-09-16T18:29:42.076938"
+      "hash": "85d133e659bc33e9c08a4953fcbe3b2e22c13b3441cff1f45d4df7c028ddaec2",
+      "last_updated": "2025-09-26T18:27:19.506682"
     },
     "slash-commands.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/slash-commands",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/slash-commands.md",
-      "hash": "d4cbd2be73f251ff178a0d21980a7b019ebc9ecd0cd6f74eb2adc17c3d86d3b5",
-      "last_updated": "2025-09-24T15:21:27.410694"
+      "hash": "84a6f3de9603d1d01b14d136cfa358a5e33478474db069d4c157ca8f7ec69ca9",
+      "last_updated": "2025-09-26T18:27:20.732406"
     },
     "statusline.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/statusline",
@@ -297,8 +297,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-26T15:21:06.657675",
-    "fetch_duration_seconds": 26.002875,
+    "last_fetch_completed": "2025-09-26T18:27:42.562243",
+    "fetch_duration_seconds": 54.392517,
     "total_pages_discovered": 48,
     "pages_fetched_successfully": 49,
     "pages_failed": 0,
@@ -308,7 +308,7 @@
     "total_files": 49,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-26T15:21:06.657704",
+  "last_updated": "2025-09-26T18:27:42.562277",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",

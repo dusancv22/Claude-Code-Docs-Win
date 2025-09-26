@@ -281,9 +281,17 @@ Example:
 
 This tool puts each available custom slash command's metadata into context up to the
 character budget limit. You can use `/context` to monitor token usage and follow
-the operations below to manage `SlashCommand` tool context.
+the operations below to manage context.
 
-Currently, `SlashCommand` tool does not support built-in commands like `/compact`.
+### `SlashCommand` tool supported commands
+
+`SlashCommand` tool only supports custom slash commands that:
+
+* Are user-defined. Built-in commands like `/compact` and `/init` are *not* supported.
+* Have the `description` frontmatter field populated. We use the `description` in the context.
+
+For Claude Code versions >= 1.0.124, you can see which custom slash commands
+`SlashCommand` tool can invoke by running `claude --debug` and triggering a query.
 
 ### Disable `SlashCommand` tool
 
