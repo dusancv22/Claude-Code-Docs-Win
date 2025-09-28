@@ -13,7 +13,7 @@ We will train new models using data from Free, Pro, and Max accounts when this s
 
 * If you're a current user, you can select your preference now and your selection will immediately go into effect.
   This setting will only apply to new or resumed chats and coding sessions on Claude. Previous chats with no additional activity will not be used for model training.
-* You have until September 28, 2025 to make your selection.
+* You have until October 8, 2025 to make your selection.
   If you're a new user, you can pick your setting for model training during the signup process.
   You can change your selection at any time in your Privacy Settings.
 
