@@ -18,7 +18,7 @@ claude -p "Stage my changes and write a set of commits for them" \
 
 ## Configuration Options
 
-The SDK leverages all the CLI options available in Claude Code. Here are the key ones for SDK usage:
+Headless mode leverages all the CLI options available in Claude Code. Here are the key ones for automation and scripting:
 
 | Flag                       | Description                                                                                            | Example                                                                                                                   |
 | :------------------------- | :----------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |

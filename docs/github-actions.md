@@ -114,7 +114,7 @@ All beta users must make these changes to their workflow files in order to upgra
     claude_args: |
       --system-prompt "Follow our coding standards"
       --max-turns 10
-      --model claude-sonnet-4-20250514
+      --model claude-sonnet-4-5-20250929
 ```
 
 <Tip>
@@ -503,7 +503,7 @@ Before setting up Claude Code GitHub Actions with cloud providers, you need:
                 with:
                   github_token: ${{ steps.app-token.outputs.token }}
                   use_bedrock: "true"
-                  claude_args: '--model us.anthropic.claude-sonnet-4-20250514-v1:0 --max-turns 10'
+                  claude_args: '--model us.anthropic.claude-sonnet-4-5-20250929-v1:0 --max-turns 10'
         ```
 
         <Tip>
@@ -627,13 +627,13 @@ The Claude Code Action v1 uses a simplified configuration:
 The `claude_args` parameter accepts any Claude Code CLI arguments:
 
 ```yaml
-claude_args: "--max-turns 5 --model claude-sonnet-4-20250514 --mcp-config /path/to/config.json"
+claude_args: "--max-turns 5 --model claude-sonnet-4-5-20250929 --mcp-config /path/to/config.json"
 ```
 
 Common arguments:
 
 * `--max-turns`: Maximum conversation turns (default: 10)
-* `--model`: Model to use (e.g., `claude-sonnet-4-20250514`)
+* `--model`: Model to use (e.g., `claude-sonnet-4-5-20250929`)
 * `--mcp-config`: Path to MCP configuration
 * `--allowed-tools`: Comma-separated list of allowed tools
 * `--debug`: Enable debug output

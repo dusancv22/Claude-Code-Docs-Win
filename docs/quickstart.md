@@ -84,15 +84,7 @@ cd /path/to/your/project
 claude
 ```
 
-You'll see the Claude Code prompt inside a new interactive session:
-
-```
-✻ Welcome to Claude Code!
-
-...
-
-> Try "create a util logging.py that..." 
-```
+You'll see the Claude Code welcome screen with your session information, recent conversations, and latest updates. Type `/help` for available commands or `/resume` to continue a previous conversation.
 
 <Tip>
   After logging in (Step 2), your credentials are stored on your system. Learn more in [Credential Management](/en/docs/claude-code/iam#credential-management).

@@ -11,7 +11,7 @@
 | `/bug`                    | Report bugs (sends conversation to Anthropic)                                                                                                |
 | `/clear`                  | Clear conversation history                                                                                                                   |
 | `/compact [instructions]` | Compact conversation with optional focus instructions                                                                                        |
-| `/config`                 | View/modify configuration                                                                                                                    |
+| `/config`                 | Open the Settings interface (Config tab)                                                                                                     |
 | `/cost`                   | Show token usage statistics (see [cost tracking guide](/en/docs/claude-code/costs#using-the-cost-command) for subscription-specific details) |
 | `/doctor`                 | Checks the health of your Claude Code installation                                                                                           |
 | `/help`                   | Get usage help                                                                                                                               |
@@ -24,7 +24,8 @@
 | `/permissions`            | View or update [permissions](/en/docs/claude-code/iam#configuring-permissions)                                                               |
 | `/pr_comments`            | View pull request comments                                                                                                                   |
 | `/review`                 | Request code review                                                                                                                          |
-| `/status`                 | View account and system statuses                                                                                                             |
+| `/rewind`                 | Rewind the conversation and/or code                                                                                                          |
+| `/status`                 | Open the Settings interface (Status tab) showing version, model, account, and connectivity                                                   |
 | `/terminal-setup`         | Install Shift+Enter key binding for newlines (iTerm2 and VSCode only)                                                                        |
 | `/vim`                    | Enter vim mode for alternating insert and command modes                                                                                      |
 

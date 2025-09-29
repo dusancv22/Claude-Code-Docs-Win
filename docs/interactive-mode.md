@@ -6,14 +6,16 @@
 
 ### General controls
 
-| Shortcut         | Description                        | Context                                                     |
-| :--------------- | :--------------------------------- | :---------------------------------------------------------- |
-| `Ctrl+C`         | Cancel current input or generation | Standard interrupt                                          |
-| `Ctrl+D`         | Exit Claude Code session           | EOF signal                                                  |
-| `Ctrl+L`         | Clear terminal screen              | Keeps conversation history                                  |
-| `Up/Down arrows` | Navigate command history           | Recall previous inputs                                      |
-| `Esc` + `Esc`    | Edit previous message              | Double-escape to modify                                     |
-| `Shift+Tab`      | Toggle permission modes            | Switch between Auto-Accept Mode, Plan Mode, and normal mode |
+| Shortcut         | Description                                                              | Context                                                     |
+| :--------------- | :----------------------------------------------------------------------- | :---------------------------------------------------------- |
+| `Ctrl+C`         | Cancel current input or generation                                       | Standard interrupt                                          |
+| `Ctrl+D`         | Exit Claude Code session                                                 | EOF signal                                                  |
+| `Ctrl+L`         | Clear terminal screen                                                    | Keeps conversation history                                  |
+| `Ctrl+R`         | Reverse search command history                                           | Search through previous commands interactively              |
+| `Up/Down arrows` | Navigate command history                                                 | Recall previous inputs                                      |
+| `Esc` + `Esc`    | Rewind the code/conversation                                             | Restore the code and/or conversation to a previous point    |
+| `Tab`            | Toggle [extended thinking](/en/docs/build-with-claude/extended-thinking) | Switch between Thinking on and Thinking off                 |
+| `Shift+Tab`      | Toggle permission modes                                                  | Switch between Auto-Accept Mode, Plan Mode, and normal mode |
 
 ### Multiline input
 
@@ -87,8 +89,23 @@ Claude Code maintains command history for the current session:
 * History is stored per working directory
 * Cleared with `/clear` command
 * Use Up/Down arrows to navigate (see keyboard shortcuts above)
-* **Ctrl+R**: Reverse search through history (if supported by terminal)
 * **Note**: History expansion (`!`) is disabled by default
+
+### Reverse search with Ctrl+R
+
+Press `Ctrl+R` to interactively search through your command history:
+
+1. **Start search**: Press `Ctrl+R` to activate reverse history search
+2. **Type query**: Enter text to search for in previous commands - the search term will be highlighted in matching results
+3. **Navigate matches**: Press `Ctrl+R` again to cycle through older matches
+4. **Accept match**:
+   * Press `Tab` or `Esc` to accept the current match and continue editing
+   * Press `Enter` to accept and execute the command immediately
+5. **Cancel search**:
+   * Press `Ctrl+C` to cancel and restore your original input
+   * Press `Backspace` on empty search to cancel
+
+The search displays matching commands with the search term highlighted, making it easy to find and reuse previous inputs.
 
 ## Background bash commands
 
@@ -96,7 +113,7 @@ Claude Code supports running bash commands in the background, allowing you to co
 
 ### How backgrounding works
 
-When Claude Code runs a command in the background, it runs the command runs asynchronously and returns immediately with a background task ID. Claude Code can respond to new prompts while the command continues executing in the background.
+When Claude Code runs a command in the background, it runs the command asynchronously and immediately returns a background task ID. Claude Code can respond to new prompts while the command continues executing in the background.
 
 To run commands in the background, you can either:
 
@@ -139,6 +156,7 @@ This is useful for quick shell operations while maintaining conversation context
 ## See also
 
 * [Slash commands](/en/docs/claude-code/slash-commands) - Interactive session commands
+* [Checkpointing](/en/docs/claude-code/checkpointing) - Rewind Claude's edits and restore previous states
 * [CLI reference](/en/docs/claude-code/cli-reference) - Command-line flags and options
 * [Settings](/en/docs/claude-code/settings) - Configuration options
 * [Memory management](/en/docs/claude-code/memory) - Managing CLAUDE.md files

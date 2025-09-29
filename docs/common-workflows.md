@@ -507,10 +507,14 @@ Use @ to quickly include files or directories without waiting for Claude to read
 
 Suppose you're working on complex architectural decisions, challenging bugs, or planning multi-step implementations that require deep reasoning.
 
+<Note>
+  [Extended thinking](/en/docs/build-with-claude/extended-thinking) is disabled by default in Claude Code. You can enable it on-demand by using `Tab` to toggle Thinking on, or by using prompts like "think" or "think hard". You can also enable it permanently by setting the [`MAX_THINKING_TOKENS` environment variable](/en/docs/claude-code/settings#environment-variables) in your settings.
+</Note>
+
 <Steps>
   <Step title="Provide context and ask Claude to think">
     ```
-    > I need to implement a new authentication system using OAuth2 for our API. Think deeply about the best approach for implementing this in our codebase. 
+    > I need to implement a new authentication system using OAuth2 for our API. Think deeply about the best approach for implementing this in our codebase.
     ```
 
     Claude will gather relevant information from your codebase and
@@ -523,7 +527,7 @@ Suppose you're working on complex architectural decisions, challenging bugs, or 
     ```
 
     ```
-    > keep thinking about edge cases we should handle 
+    > think hard about edge cases we should handle 
     ```
   </Step>
 </Steps>
@@ -531,7 +535,7 @@ Suppose you're working on complex architectural decisions, challenging bugs, or 
 <Tip>
   Tips to get the most value out of extended thinking:
 
-  Extended thinking is most valuable for complex tasks such as:
+  [Extended thinking](/en/docs/build-with-claude/extended-thinking) is most valuable for complex tasks such as:
 
   * Planning complex architectural changes
   * Debugging intricate issues
@@ -539,10 +543,12 @@ Suppose you're working on complex architectural decisions, challenging bugs, or 
   * Understanding complex codebases
   * Evaluating tradeoffs between different approaches
 
+  Use `Tab` to toggle Thinking on and off during a session.
+
   The way you prompt for thinking results in varying levels of thinking depth:
 
   * "think" triggers basic extended thinking
-  * intensifying phrases such as "keep thinking", "think more", "think a lot", or "think longer" triggers deeper thinking
+  * intensifying phrases such as "keep hard", "think more", "think a lot", or "think longer" triggers deeper thinking
 
   For more extended thinking prompting tips, see [Extended thinking tips](/en/docs/build-with-claude/prompt-engineering/extended-thinking-tips).
 </Tip>
@@ -585,13 +591,12 @@ Claude Code provides two options for resuming previous conversations:
     claude --resume
     ```
 
-    This displays an interactive conversation selector showing:
+    This displays an interactive conversation selector with a clean list view showing:
 
-    * Conversation start time
-    * Initial prompt or conversation summary
-    * Message count
+    * Session summary (or initial prompt)
+    * Metadata: time elapsed, message count, and git branch
 
-    Use arrow keys to navigate and press Enter to select a conversation.
+    Use arrow keys to navigate and press Enter to select a conversation. Press Esc to exit.
   </Step>
 </Steps>
 

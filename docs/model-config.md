@@ -18,8 +18,8 @@ remembering exact version numbers:
 | Model alias      | Behavior                                                                                                                                         |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **`default`**    | Recommended model setting, depending on your account type                                                                                        |
-| **`sonnet`**     | Uses the latest Sonnet model (currently Sonnet 4) for daily coding tasks                                                                         |
-| **`opus`**       | Uses the most capable Opus model (currently Opus 4.1) for complex reasoning                                                                      |
+| **`sonnet`**     | Uses the latest Sonnet model (currently Sonnet 4.5) for daily coding tasks                                                                       |
+| **`opus`**       | Uses Opus model (currently Opus 4.1) for specialized complex reasoning tasks                                                                     |
 | **`haiku`**      | Uses the fast and efficient Haiku model for simple tasks                                                                                         |
 | **`sonnet[1m]`** | Uses Sonnet with a [1 million token context window](/en/docs/build-with-claude/context-windows#1m-token-context-window) window for long sessions |
 | **`opusplan`**   | Special mode that uses `opus` during plan mode, then switches to `sonnet` for execution                                                          |
@@ -84,7 +84,7 @@ enable a
 
 ```bash
 # Example of using a full model name with the [1m] suffix
-/model anthropic.claude-sonnet-4-20250514-v1:0[1m]
+/model anthropic.claude-sonnet-4-5-20250929-v1:0[1m]
 ```
 
 Note: Extended context models have

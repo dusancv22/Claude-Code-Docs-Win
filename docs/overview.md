@@ -25,6 +25,10 @@ That's it! You're ready to start coding with Claude. [Continue with Quickstart (
 
 (Got specific setup needs or hit issues? See [advanced setup](/en/docs/claude-code/setup) or [troubleshooting](/en/docs/claude-code/troubleshooting).)
 
+<Note>
+  **New VS Code Extension (Beta)**: Prefer a graphical interface? Our new [VS Code extension](/en/docs/claude-code/vs-code) provides an easy-to-use native IDE experience without requiring terminal familiarity. Simply install from the marketplace and start coding with Claude directly in your sidebar.
+</Note>
+
 ## What Claude Code does for you
 
 * **Build features from descriptions**: Tell Claude what you want to build in plain English. It will make a plan, write the code, and ensure it works.
