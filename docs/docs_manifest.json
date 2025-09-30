@@ -39,8 +39,8 @@
     "data-usage.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/data-usage",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/data-usage.md",
-      "hash": "71ba155f5ce10bfd29b64a1b5d04806b9e4d36fcce7ba57281e830ee6ce977be",
-      "last_updated": "2025-09-28T21:16:26.297518"
+      "hash": "5323ab0a66f750940fa59a13a506478c7242cdbca4409857b65a2976abbbacc7",
+      "last_updated": "2025-09-30T01:27:55.524854"
     },
     "devcontainer.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/devcontainer",
@@ -237,8 +237,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-29T21:17:46.603921",
-    "fetch_duration_seconds": 22.928889,
+    "last_fetch_completed": "2025-09-30T01:28:11.861711",
+    "fetch_duration_seconds": 20.297297,
     "total_pages_discovered": 38,
     "pages_fetched_successfully": 39,
     "pages_failed": 0,
@@ -248,7 +248,7 @@
     "total_files": 39,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-29T21:17:46.603952",
+  "last_updated": "2025-09-30T01:28:11.861735",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
