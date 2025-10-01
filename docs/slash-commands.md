@@ -27,6 +27,7 @@
 | `/rewind`                 | Rewind the conversation and/or code                                                                                                          |
 | `/status`                 | Open the Settings interface (Status tab) showing version, model, account, and connectivity                                                   |
 | `/terminal-setup`         | Install Shift+Enter key binding for newlines (iTerm2 and VSCode only)                                                                        |
+| `/usage`                  | Show plan usage limits and rate limit status (subscription plans only)                                                                       |
 | `/vim`                    | Enter vim mode for alternating insert and command modes                                                                                      |
 
 ## Custom slash commands

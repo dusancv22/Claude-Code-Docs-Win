@@ -112,16 +112,16 @@ When enabling Bedrock for Claude Code, keep the following in mind:
 
 Claude Code uses these default models for Bedrock:
 
-| Model type       | Default value                                  |
-| :--------------- | :--------------------------------------------- |
-| Primary model    | `us.anthropic.claude-sonnet-4-5-20250929-v1:0` |
-| Small/fast model | `us.anthropic.claude-3-5-haiku-20241022-v1:0`  |
+| Model type       | Default value                                      |
+| :--------------- | :------------------------------------------------- |
+| Primary model    | `global.anthropic.claude-sonnet-4-5-20250929-v1:0` |
+| Small/fast model | `us.anthropic.claude-3-5-haiku-20241022-v1:0`      |
 
 To customize models, use one of these methods:
 
 ```bash
 # Using inference profile ID
-export ANTHROPIC_MODEL='us.anthropic.claude-sonnet-4-5-20250929-v1:0'
+export ANTHROPIC_MODEL='global.anthropic.claude-sonnet-4-5-20250929-v1:0'
 export ANTHROPIC_SMALL_FAST_MODEL='us.anthropic.claude-3-5-haiku-20241022-v1:0'
 
 # Using application inference profile ARN

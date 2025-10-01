@@ -82,6 +82,32 @@ Subagents are stored as Markdown files with YAML frontmatter in two possible loc
 
 When subagent names conflict, project-level subagents take precedence over user-level subagents.
 
+### CLI-based configuration
+
+You can also define subagents dynamically using the `--agents` CLI flag, which accepts a JSON object:
+
+```bash
+claude --agents '{
+  "code-reviewer": {
+    "description": "Expert code reviewer. Use proactively after code changes.",
+    "prompt": "You are a senior code reviewer. Focus on code quality, security, and best practices.",
+    "tools": ["Read", "Grep", "Glob", "Bash"],
+    "model": "sonnet"
+  }
+}'
+```
+
+**Priority**: CLI-defined subagents have lower priority than project-level subagents but higher priority than user-level subagents.
+
+**Use case**: This approach is useful for:
+
+* Quick testing of subagent configurations
+* Session-specific subagents that don't need to be saved
+* Automation scripts that need custom subagents
+* Sharing subagent definitions in documentation or scripts
+
+For detailed information about the JSON format and all available options, see the [CLI reference documentation](/en/docs/claude-code/cli-reference#agents-flag-format).
+
 ### File format
 
 Each subagent is defined in a Markdown file with this structure:

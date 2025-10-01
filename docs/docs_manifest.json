@@ -3,8 +3,8 @@
     "amazon-bedrock.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/amazon-bedrock",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/amazon-bedrock.md",
-      "hash": "33b94e44746b46ef47d79a329e3e356eb9b948e295347db2e5e5c070784a52eb",
-      "last_updated": "2025-09-30T18:26:44.066777"
+      "hash": "2238b6f68a5f8c4c867df8b6512eea95a087eb002b5425fc3a9731c6e7ad6d25",
+      "last_updated": "2025-10-01T01:45:46.574882"
     },
     "analytics.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/analytics",
@@ -21,8 +21,8 @@
     "cli-reference.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/cli-reference",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/cli-reference.md",
-      "hash": "5b6110c187e3bcb3dae2e710ceb72dfcf83721194dc3c82dd2c467e23ba00f2f",
-      "last_updated": "2025-09-30T18:26:45.636969"
+      "hash": "37d0576db8ef7110c86d6c919fa870bda16561a9a0de75458692a250c4baacb8",
+      "last_updated": "2025-10-01T01:45:48.143643"
     },
     "common-workflows.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/common-workflows",
@@ -177,8 +177,8 @@
     "settings.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/settings",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/settings.md",
-      "hash": "d30f142847fee79aabca9713ecbe56ffb163da60430b1688be4a9a4ef78d3eae",
-      "last_updated": "2025-09-29T18:30:22.442844"
+      "hash": "41efe484cc340ec56ce3a96d9948f4bcaded5b6ac2460a1219bccc19ab15e392",
+      "last_updated": "2025-10-01T01:46:01.702610"
     },
     "setup.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/setup",
@@ -189,8 +189,8 @@
     "slash-commands.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/slash-commands",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/slash-commands.md",
-      "hash": "6ffc89d3d067f99417e4514ca2cc8184aa0ff98a7787c5379f58555e4fdf721b",
-      "last_updated": "2025-09-30T18:27:00.309774"
+      "hash": "43362c2bbeed1119046189f8eeee267e424b8347adec17d9228b9361e0caaf86",
+      "last_updated": "2025-10-01T01:46:02.747620"
     },
     "statusline.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/statusline",
@@ -201,14 +201,14 @@
     "sub-agents.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sub-agents",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/sub-agents.md",
-      "hash": "7cb9a8cd7a2774847458d4738fd71b103eea219643c1bcd2706a1a033312cacd",
-      "last_updated": "2025-09-30T18:27:01.377027"
+      "hash": "2e34cba0e0d8be2a1d2c18eed09c35bdd79e89a92825130a52ba2609df51bdfb",
+      "last_updated": "2025-10-01T01:46:03.786116"
     },
     "terminal-config.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/terminal-config",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/terminal-config.md",
-      "hash": "f43b3d3ff68b017ff8c039aa896bc6dd5df213141f6341f4ed012ff05de08efb",
-      "last_updated": "2025-09-30T18:27:01.897722"
+      "hash": "24102bbe16be8340a6712575fd76b0789f4bdbb24a02d92cdf383b9283361846",
+      "last_updated": "2025-10-01T01:46:04.317810"
     },
     "third-party-integrations.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/third-party-integrations",
@@ -231,14 +231,14 @@
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
-      "hash": "19fe6f4dc24b944f964dc326d55e43c03ee9e040b016db54d8f72b9d634b00c1",
-      "last_updated": "2025-09-30T03:32:00.660773",
+      "hash": "c960b495c7e08169f4639684dea0215b83eba97d2e8ec5d0a3711d3bd19633e0",
+      "last_updated": "2025-10-01T01:46:05.930529",
       "source": "claude-code-repository"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-09-30T21:17:51.499636",
-    "fetch_duration_seconds": 20.636686,
+    "last_fetch_completed": "2025-10-01T01:46:05.930572",
+    "fetch_duration_seconds": 22.645091,
     "total_pages_discovered": 38,
     "pages_fetched_successfully": 39,
     "pages_failed": 0,
@@ -248,7 +248,7 @@
     "total_files": 39,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-09-30T21:17:51.499660",
+  "last_updated": "2025-10-01T01:46:05.930613",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",

@@ -203,29 +203,6 @@ Claude Code supports the following environment variables to control its behavior
 | `VERTEX_REGION_CLAUDE_4_0_SONNET`          | Override region for Claude 4.0 Sonnet when using Vertex AI                                                                                                                                                                                                                                                                                     |
 | `VERTEX_REGION_CLAUDE_4_1_OPUS`            | Override region for Claude 4.1 Opus when using Vertex AI                                                                                                                                                                                                                                                                                       |
 
-## Configuration options
-
-To manage your configurations, use the following commands:
-
-* List settings: `claude config list`
-* See a setting: `claude config get <key>`
-* Change a setting: `claude config set <key> <value>`
-* Push to a setting (for lists): `claude config add <key> <value>`
-* Remove from a setting (for lists): `claude config remove <key> <value>`
-
-By default `config` changes your project configuration. To manage your global configuration, use the `--global` (or `-g`) flag.
-
-### Global configuration
-
-To set a global configuration, use `claude config set -g <key> <value>`:
-
-| Key                     | Description                                                                 | Example                                                                    |
-| :---------------------- | :-------------------------------------------------------------------------- | :------------------------------------------------------------------------- |
-| `autoUpdates`           | **DEPRECATED.** Use the `DISABLE_AUTOUPDATER` environment variable instead. | `false`                                                                    |
-| `preferredNotifChannel` | Where you want to receive notifications (default: `iterm2`)                 | `iterm2`, `iterm2_with_bell`, `terminal_bell`, or `notifications_disabled` |
-| `theme`                 | Color theme                                                                 | `dark`, `light`, `light-daltonized`, or `dark-daltonized`                  |
-| `verbose`               | Whether to show full bash and command outputs (default: `false`)            | `true`                                                                     |
-
 ## Tools available to Claude
 
 Claude Code has access to a set of powerful tools that help it understand and modify your codebase:
