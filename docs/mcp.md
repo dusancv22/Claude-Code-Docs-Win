@@ -1124,3 +1124,48 @@ MCP servers can expose prompts that become available as slash commands in Claude
   * Prompt results are injected directly into the conversation
   * Server and prompt names are normalized (spaces become underscores)
 </Tip>
+
+## Enterprise MCP configuration
+
+For organizations that need centralized control over MCP servers, Claude Code supports enterprise-managed MCP configurations. This allows IT administrators to:
+
+* **Control which MCP servers employees can access**: Deploy a standardized set of approved MCP servers across the organization
+* **Prevent unauthorized MCP servers**: Optionally restrict users from adding their own MCP servers
+* **Disable MCP entirely**: Remove MCP functionality completely if needed
+
+### Setting up enterprise MCP configuration
+
+System administrators can deploy an enterprise MCP configuration file alongside the managed settings file:
+
+* **macOS**: `/Library/Application Support/ClaudeCode/managed-mcp.json`
+* **Windows**: `C:\ProgramData\ClaudeCode\managed-mcp.json`
+* **Linux**: `/etc/claude-code/managed-mcp.json`
+
+The `managed-mcp.json` file uses the same format as a standard `.mcp.json` file:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+    "sentry": {
+      "type": "http",
+      "url": "https://mcp.sentry.dev/mcp"
+    },
+    "company-internal": {
+      "type": "stdio",
+      "command": "/usr/local/bin/company-mcp-server",
+      "args": ["--config", "/etc/company/mcp-config.json"],
+      "env": {
+        "COMPANY_API_URL": "https://internal.company.com"
+      }
+    }
+  }
+}
+```
+
+<Note>
+  **Enterprise configuration precedence**: The enterprise MCP configuration has the highest precedence and cannot be overridden by user, local, or project configurations when `useEnterpriseMcpConfigOnly` is enabled.
+</Note>
