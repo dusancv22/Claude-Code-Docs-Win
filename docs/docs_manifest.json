@@ -99,8 +99,8 @@
     "jetbrains.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/jetbrains",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/jetbrains.md",
-      "hash": "8442aea6292f99e061c2902e76fee0c9b084b47b47c77d6dc6238969f76a2518",
-      "last_updated": "2025-09-30T18:26:52.449663"
+      "hash": "103a1a2407163375a5e6905bdf097d8402dde7b61f2427e49185463c43100862",
+      "last_updated": "2025-10-06T18:30:06.088060"
     },
     "legal-and-compliance.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/legal-and-compliance",
@@ -117,8 +117,8 @@
     "mcp.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/mcp",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/mcp.md",
-      "hash": "000fdb9631a66f3dda08d1682cc9ae30971b265e2231cc449bdaa245413fcc6f",
-      "last_updated": "2025-10-02T21:17:06.897662"
+      "hash": "c96e19a55d4cb5c392b5be4fef8ba2956813c2fbc6fd4685592b5b2e5c5c9b0b",
+      "last_updated": "2025-10-06T18:30:07.713564"
     },
     "memory.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/memory",
@@ -237,8 +237,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-10-06T15:20:55.388324",
-    "fetch_duration_seconds": 21.093044,
+    "last_fetch_completed": "2025-10-06T18:30:17.598217",
+    "fetch_duration_seconds": 21.621154,
     "total_pages_discovered": 38,
     "pages_fetched_successfully": 39,
     "pages_failed": 0,
@@ -248,7 +248,7 @@
     "total_files": 39,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-10-06T15:20:55.388355",
+  "last_updated": "2025-10-06T18:30:17.598245",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",

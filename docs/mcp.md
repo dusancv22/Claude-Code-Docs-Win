@@ -40,20 +40,20 @@ export const MCPServersTable = ({platform = "all"}) => {
   }, {
     name: "Figma",
     category: "Design & Media",
-    description: "Access designs, export assets",
-    documentation: "https://help.figma.com/hc/en-us/articles/32132100833559",
+    description: "Generate better code by bringing in full Figma context",
+    documentation: "https://developers.figma.com",
     urls: {
-      http: "http://127.0.0.1:3845/mcp"
+      http: "https://mcp.figma.com/mcp"
     },
     customCommands: {
-      claudeCode: "claude mcp add --transport http figma-dev-mode-mcp-server http://127.0.0.1:3845/mcp"
+      claudeCode: "claude mcp add --transport http figma-remote-mcp https://mcp.figma.com/mcp"
     },
     availability: {
       claudeCode: true,
       mcpConnector: false,
       claudeDesktop: false
     },
-    notes: "Requires latest Figma Desktop with Dev Mode MCP Server. If you have an existing server at http://127.0.0.1:3845/sse, delete it first before adding the new one."
+    notes: "Visit developers.figma.com for local server setup."
   }, {
     name: "Asana",
     category: "Project Management & Documentation",

@@ -27,7 +27,7 @@ The Claude Code plugin works with most JetBrains IDEs, including:
 
 ### Marketplace Installation
 
-Find and install the [Claude Code plugin](https://plugins.jetbrains.com/plugin/24099-claude-code) from the JetBrains marketplace and restart your IDE.
+Find and install the [Claude Code plugin](https://plugins.jetbrains.com/plugin/27310-claude-code-beta-) from the JetBrains marketplace and restart your IDE.
 
 ### Auto-Installation
 
