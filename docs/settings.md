@@ -26,7 +26,7 @@ Code through hierarchical settings:
   * Linux and WSL: `/etc/claude-code/managed-mcp.json`
   * Windows: `C:\ProgramData\ClaudeCode\managed-mcp.json`
 
-```JSON Example settings.json
+```JSON Example settings.json theme={null}
 {
   "permissions": {
     "allow": [
@@ -125,7 +125,7 @@ This hierarchy ensures that enterprise security policies are always enforced whi
 
 To prevent Claude Code from accessing files containing sensitive information (e.g., API keys, secrets, environment files), use the `permissions.deny` setting in your `.claude/settings.json` file:
 
-```json
+```json  theme={null}
 {
   "permissions": {
     "deny": [

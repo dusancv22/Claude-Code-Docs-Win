@@ -15,7 +15,7 @@ export const MCPServersTable = ({platform = "all"}) => {
     }
     if (server.urls.stdio) {
       const envFlags = server.authentication && server.authentication.envVars ? server.authentication.envVars.map(v => `--env ${v}=YOUR_${v.split('_').pop()}`).join(' ') : '';
-      const baseCommand = `claude mcp add ${server.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+      const baseCommand = `claude mcp add --transport stdio ${server.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
       return envFlags ? `${baseCommand} ${envFlags} -- ${server.urls.stdio}` : `${baseCommand} -- ${server.urls.stdio}`;
     }
     return null;
@@ -629,52 +629,11 @@ Here are some commonly used MCP servers you can connect to Claude Code:
 
 MCP servers can be configured in three different ways depending on your needs:
 
-### Option 1: Add a local stdio server
+### Option 1: Add a remote HTTP server
 
-Stdio servers run as local processes on your machine. They're ideal for tools that need direct system access or custom scripts.
+HTTP servers are the recommended option for connecting to remote MCP servers. This is the most widely supported transport for cloud-based services.
 
-```bash
-# Basic syntax
-claude mcp add <name> <command> [args...]
-
-# Real example: Add Airtable server
-claude mcp add airtable --env AIRTABLE_API_KEY=YOUR_KEY \
-  -- npx -y airtable-mcp-server
-```
-
-<Note>
-  **Understanding the "--" parameter:**
-  The `--` (double dash) separates Claude's own CLI flags from the command and arguments that get passed to the MCP server. Everything before `--` are options for Claude (like `--env`, `--scope`), and everything after `--` is the actual command to run the MCP server.
-
-  For example:
-
-  * `claude mcp add myserver -- npx server` → runs `npx server`
-  * `claude mcp add myserver --env KEY=value -- python server.py --port 8080` → runs `python server.py --port 8080` with `KEY=value` in environment
-
-  This prevents conflicts between Claude's flags and the server's flags.
-</Note>
-
-### Option 2: Add a remote SSE server
-
-SSE (Server-Sent Events) servers provide real-time streaming connections. Many cloud services use this for live updates.
-
-```bash
-# Basic syntax
-claude mcp add --transport sse <name> <url>
-
-# Real example: Connect to Linear
-claude mcp add --transport sse linear https://mcp.linear.app/sse
-
-# Example with authentication header
-claude mcp add --transport sse private-api https://api.company.com/mcp \
-  --header "X-API-Key: your-key-here"
-```
-
-### Option 3: Add a remote HTTP server
-
-HTTP servers use standard request/response patterns. Most REST APIs and web services use this transport.
-
-```bash
+```bash  theme={null}
 # Basic syntax
 claude mcp add --transport http <name> <url>
 
@@ -686,11 +645,54 @@ claude mcp add --transport http secure-api https://api.example.com/mcp \
   --header "Authorization: Bearer your-token"
 ```
 
+### Option 2: Add a remote SSE server
+
+<Warning>
+  The SSE (Server-Sent Events) transport is deprecated. Use HTTP servers instead, where available.
+</Warning>
+
+```bash  theme={null}
+# Basic syntax
+claude mcp add --transport sse <name> <url>
+
+# Real example: Connect to Asana
+claude mcp add --transport sse asana https://mcp.asana.com/sse
+
+# Example with authentication header
+claude mcp add --transport sse private-api https://api.company.com/sse \
+  --header "X-API-Key: your-key-here"
+```
+
+### Option 3: Add a local stdio server
+
+Stdio servers run as local processes on your machine. They're ideal for tools that need direct system access or custom scripts.
+
+```bash  theme={null}
+# Basic syntax
+claude mcp add --transport stdio <name> <command> [args...]
+
+# Real example: Add Airtable server
+claude mcp add --transport stdio airtable --env AIRTABLE_API_KEY=YOUR_KEY \
+  -- npx -y airtable-mcp-server
+```
+
+<Note>
+  **Understanding the "--" parameter:**
+  The `--` (double dash) separates Claude's own CLI flags from the command and arguments that get passed to the MCP server. Everything before `--` are options for Claude (like `--env`, `--scope`), and everything after `--` is the actual command to run the MCP server.
+
+  For example:
+
+  * `claude mcp add --transport stdio myserver -- npx server` → runs `npx server`
+  * `claude mcp add --transport stdio myserver --env KEY=value -- python server.py --port 8080` → runs `python server.py --port 8080` with `KEY=value` in environment
+
+  This prevents conflicts between Claude's flags and the server's flags.
+</Note>
+
 ### Managing your servers
 
 Once configured, you can manage your MCP servers with these commands:
 
-```bash
+```bash  theme={null}
 # List all configured servers
 claude mcp list
 
@@ -720,9 +722,9 @@ claude mcp remove github
 <Warning>
   **Windows Users**: On native Windows (not WSL), local MCP servers that use `npx` require the `cmd /c` wrapper to ensure proper execution.
 
-  ```bash
+  ```bash  theme={null}
   # This creates command="cmd" which Windows can execute
-  claude mcp add my-server -- cmd /c npx -y @some/package
+  claude mcp add --transport stdio my-server -- cmd /c npx -y @some/package
   ```
 
   Without the `cmd /c` wrapper, you'll encounter "Connection closed" errors because Windows cannot directly execute `npx`. (See the note above for an explanation of the `--` parameter.)
@@ -736,26 +738,26 @@ MCP servers can be configured at three different scope levels, each serving dist
 
 Local-scoped servers represent the default configuration level and are stored in your project-specific user settings. These servers remain private to you and are only accessible when working within the current project directory. This scope is ideal for personal development servers, experimental configurations, or servers containing sensitive credentials that shouldn't be shared.
 
-```bash
+```bash  theme={null}
 # Add a local-scoped server (default)
-claude mcp add my-private-server /path/to/server
+claude mcp add --transport http stripe https://mcp.stripe.com
 
 # Explicitly specify local scope
-claude mcp add my-private-server --scope local /path/to/server
+claude mcp add --transport http stripe --scope local https://mcp.stripe.com
 ```
 
 ### Project scope
 
 Project-scoped servers enable team collaboration by storing configurations in a `.mcp.json` file at your project's root directory. This file is designed to be checked into version control, ensuring all team members have access to the same MCP tools and services. When you add a project-scoped server, Claude Code automatically creates or updates this file with the appropriate configuration structure.
 
-```bash
+```bash  theme={null}
 # Add a project-scoped server
-claude mcp add shared-server --scope project /path/to/server
+claude mcp add --transport http paypal --scope project https://mcp.paypal.com/mcp
 ```
 
 The resulting `.mcp.json` file follows a standardized format:
 
-```json
+```json  theme={null}
 {
   "mcpServers": {
     "shared-server": {
@@ -773,9 +775,9 @@ For security reasons, Claude Code prompts for approval before using project-scop
 
 User-scoped servers provide cross-project accessibility, making them available across all projects on your machine while remaining private to your user account. This scope works well for personal utility servers, development tools, or services you frequently use across different projects.
 
-```bash
+```bash  theme={null}
 # Add a user server
-claude mcp add my-user-server --scope user /path/to/server
+claude mcp add --transport http hubspot --scope user https://mcp.hubspot.com/anthropic
 ```
 
 ### Choosing the right scope
@@ -805,16 +807,16 @@ Environment variables can be expanded in:
 * `command` - The server executable path
 * `args` - Command-line arguments
 * `env` - Environment variables passed to the server
-* `url` - For SSE/HTTP server types
-* `headers` - For SSE/HTTP server authentication
+* `url` - For HTTP server types
+* `headers` - For HTTP server authentication
 
 **Example with variable expansion:**
 
-```json
+```json  theme={null}
 {
   "mcpServers": {
     "api-server": {
-      "type": "sse",
+      "type": "http",
       "url": "${API_BASE_URL:-https://api.example.com}/mcp",
       "headers": {
         "Authorization": "Bearer ${API_KEY}"
@@ -828,46 +830,21 @@ If a required environment variable is not set and has no default value, Claude C
 
 ## Practical examples
 
-{/* These are commented out while waiting for approval in https://anthropic.slack.com/archives/C08R8A6SZEX/p1754320373845919. I'm expecting/hoping to get this approval soon, so keeping this here for easy uncommenting. Reviewer: feel free to just delete this if you'd prefer. */}
-
-{/* ### Example: Connect to GitHub for code reviews
+{/* ### Example: Automate browser testing with Playwright
 
   ```bash
-  # 1. Add the GitHub MCP server
-  claude mcp add --transport http github https://api.githubcopilot.com/mcp/
+  # 1. Add the Playwright MCP server
+  claude mcp add --transport stdio playwright -- npx -y @playwright/mcp@latest
 
-  # 2. In Claude Code, authenticate if needed
-  > /mcp
-  # Select "Authenticate" for GitHub
-
-  # 3. Now you can ask Claude to work with GitHub
-  > "Review PR #456 and suggest improvements"
-  > "Create a new issue for the bug we just found"
-  > "Show me all open PRs assigned to me"
-  ```
-
-  <Tip>
-  Tips:
-  - Also see the [GitHub Actions](/en/docs/claude-code/github-actions) integration to run this automatically. 
-  - If you have the GitHub CLI installed, you might prefer using it directly with Claude Code's bash tool instead of the MCP server for some operations.
-  </Tip>
-
-  ### Example: Query your PostgreSQL database
-
-  ```bash
-  # 1. Add the database server with your connection string
-  claude mcp add db -- npx -y @bytebase/dbhub \
-  --dsn "postgresql://readonly:pass@prod.db.com:5432/analytics"
-
-  # 2. Query your database naturally
-  > "What's our total revenue this month?"
-  > "Show me the schema for the orders table"
-  > "Find customers who haven't made a purchase in 90 days"
+  # 2. Write and run browser tests
+  > "Test if the login flow works with test@example.com"
+  > "Take a screenshot of the checkout page on mobile"
+  > "Verify that the search feature returns results"
   ``` */}
 
 ### Example: Monitor errors with Sentry
 
-```bash
+```bash  theme={null}
 # 1. Add the Sentry MCP server
 claude mcp add --transport http sentry https://mcp.sentry.dev/mcp
 
@@ -880,17 +857,34 @@ claude mcp add --transport http sentry https://mcp.sentry.dev/mcp
 > "Which deployment introduced these new errors?"
 ```
 
-{/* ### Example: Automate browser testing with Playwright
+### Example: Connect to GitHub for code reviews
 
-  ```bash
-  # 1. Add the Playwright MCP server
-  claude mcp add playwright -- npx -y @playwright/mcp@latest
+```bash  theme={null}
+# 1. Add the GitHub MCP server
+claude mcp add --transport http github https://api.githubcopilot.com/mcp/
 
-  # 2. Write and run browser tests
-  > "Test if the login flow works with test@example.com"
-  > "Take a screenshot of the checkout page on mobile"
-  > "Verify that the search feature returns results"
-  ``` */}
+# 2. In Claude Code, authenticate if needed
+> /mcp
+# Select "Authenticate" for GitHub
+
+# 3. Now you can ask Claude to work with GitHub
+> "Review PR #456 and suggest improvements"
+> "Create a new issue for the bug we just found"
+> "Show me all open PRs assigned to me"
+```
+
+### Example: Query your PostgreSQL database
+
+```bash  theme={null}
+# 1. Add the database server with your connection string
+claude mcp add --transport stdio db -- npx -y @bytebase/dbhub \
+  --dsn "postgresql://readonly:pass@prod.db.com:5432/analytics"
+
+# 2. Query your database naturally
+> "What's our total revenue this month?"
+> "Show me the schema for the orders table"
+> "Find customers who haven't made a purchase in 90 days"
+```
 
 ## Authenticate with remote MCP servers
 
@@ -900,7 +894,7 @@ Many cloud-based MCP servers require authentication. Claude Code supports OAuth 
   <Step title="Add the server that requires authentication">
     For example:
 
-    ```bash
+    ```bash  theme={null}
     claude mcp add --transport http sentry https://mcp.sentry.dev/mcp
     ```
   </Step>
@@ -922,7 +916,7 @@ Many cloud-based MCP servers require authentication. Claude Code supports OAuth 
   * Authentication tokens are stored securely and refreshed automatically
   * Use "Clear authentication" in the `/mcp` menu to revoke access
   * If your browser doesn't open automatically, copy the provided URL
-  * OAuth authentication works with both SSE and HTTP transports
+  * OAuth authentication works with HTTP servers
 </Tip>
 
 ## Add MCP servers from JSON configuration
@@ -931,17 +925,20 @@ If you have a JSON configuration for an MCP server, you can add it directly:
 
 <Steps>
   <Step title="Add an MCP server from JSON">
-    ```bash
+    ```bash  theme={null}
     # Basic syntax
     claude mcp add-json <name> '<json>'
 
+    # Example: Adding an HTTP server with JSON configuration
+    claude mcp add-json weather-api '{"type":"http","url":"https://api.weather.com/mcp","headers":{"Authorization":"Bearer token"}}'
+
     # Example: Adding a stdio server with JSON configuration
-    claude mcp add-json weather-api '{"type":"stdio","command":"/path/to/weather-cli","args":["--api-key","abc123"],"env":{"CACHE_DIR":"/tmp"}}'
+    claude mcp add-json local-weather '{"type":"stdio","command":"/path/to/weather-cli","args":["--api-key","abc123"],"env":{"CACHE_DIR":"/tmp"}}'
     ```
   </Step>
 
   <Step title="Verify the server was added">
-    ```bash
+    ```bash  theme={null}
     claude mcp get weather-api
     ```
   </Step>
@@ -961,7 +958,7 @@ If you've already configured MCP servers in Claude Desktop, you can import them:
 
 <Steps>
   <Step title="Import servers from Claude Desktop">
-    ```bash
+    ```bash  theme={null}
     # Basic syntax 
     claude mcp add-from-claude-desktop 
     ```
@@ -972,7 +969,7 @@ If you've already configured MCP servers in Claude Desktop, you can import them:
   </Step>
 
   <Step title="Verify the servers were imported">
-    ```bash
+    ```bash  theme={null}
     claude mcp list 
     ```
   </Step>
@@ -992,19 +989,20 @@ If you've already configured MCP servers in Claude Desktop, you can import them:
 
 You can use Claude Code itself as an MCP server that other applications can connect to:
 
-```bash
-# Start Claude as a stdio MCP server
-claude mcp serve
+```bash  theme={null}
+# Start Claude as a stdio MCP server with explicit transport
+claude mcp serve --transport stdio
 ```
 
 You can use this in Claude Desktop by adding this configuration to claude\_desktop\_config.json:
 
-```json
+```json  theme={null}
 {
   "mcpServers": {
     "claude-code": {
+      "type": "stdio",
       "command": "claude",
-      "args": ["mcp", "serve"],
+      "args": ["mcp", "serve", "--transport", "stdio"],
       "env": {}
     }
   }
@@ -1029,7 +1027,7 @@ When MCP tools produce large outputs, Claude Code helps manage the token usage t
 
 To increase the limit for tools that produce large outputs:
 
-```bash
+```bash  theme={null}
 # Set a higher limit for MCP tool outputs
 export MAX_MCP_OUTPUT_TOKENS=50000
 claude
@@ -1143,7 +1141,7 @@ System administrators can deploy an enterprise MCP configuration file alongside 
 
 The `managed-mcp.json` file uses the same format as a standard `.mcp.json` file:
 
-```json
+```json  theme={null}
 {
   "mcpServers": {
     "github": {

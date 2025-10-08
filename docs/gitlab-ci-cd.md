@@ -5,7 +5,7 @@
 <Info>
   Claude Code for GitLab CI/CD is currently in beta. Features and functionality may evolve as we refine the experience.
 
-  This integration is maintained by GitLab. For support, see the following [GitLab issue](https://gitlab.com/gitlab-org/gitlab/-/issues/557820).
+  This integration is maintained by GitLab. For support, see the following [GitLab issue](https://gitlab.com/gitlab-org/gitlab/-/issues/573776).
 </Info>
 
 <Note>
@@ -58,7 +58,7 @@ The fastest way to get started is to add a minimal job to your `.gitlab-ci.yml` 
 
 2. **Add a Claude job to `.gitlab-ci.yml`**
 
-```yaml
+```yaml  theme={null}
 stages:
   - ai
 
@@ -183,7 +183,7 @@ For enterprise environments, you can run Claude Code entirely on your cloud infr
 
     Add variables in Settings → CI/CD → Variables:
 
-    ```yaml
+    ```yaml  theme={null}
     # For AWS Bedrock:
     - AWS_ROLE_TO_ASSUME
     - AWS_REGION
@@ -223,7 +223,7 @@ For enterprise environments, you can run Claude Code entirely on your cloud infr
 
     Add variables in Settings → CI/CD → Variables:
 
-    ```yaml
+    ```yaml  theme={null}
     # For Google Vertex AI:
     - GCP_WORKLOAD_IDENTITY_PROVIDER
     - GCP_SERVICE_ACCOUNT
@@ -240,7 +240,7 @@ Below are ready-to-use snippets you can adapt to your pipeline.
 
 ### Basic .gitlab-ci.yml (Claude API)
 
-```yaml
+```yaml  theme={null}
 stages:
   - ai
 
@@ -280,7 +280,7 @@ claude:
 * `AWS_ROLE_TO_ASSUME`: ARN of the IAM role for Bedrock access
 * `AWS_REGION`: Bedrock region (for example, `us-west-2`)
 
-```yaml
+```yaml  theme={null}
 claude-bedrock:
   stage: ai
   image: node:24-alpine3.21
@@ -332,7 +332,7 @@ claude-bedrock:
 * `GCP_SERVICE_ACCOUNT`: Service account email
 * `CLOUD_ML_REGION`: Vertex region (for example, `us-east5`)
 
-```yaml
+```yaml  theme={null}
 claude-vertex:
   stage: ai
   image: gcr.io/google.com/cloudsdktool/google-cloud-cli:slim

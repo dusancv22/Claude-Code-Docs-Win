@@ -57,7 +57,7 @@ Commands stored in your repository and shared with your team. When listed in `/h
 
 In the following example, we create the `/optimize` command:
 
-```bash
+```bash  theme={null}
 # Create a project command
 mkdir -p .claude/commands
 echo "Analyze this code for performance issues and suggest optimizations:" > .claude/commands/optimize.md
@@ -71,7 +71,7 @@ Commands available across all your projects. When listed in `/help`, these comma
 
 In the following example, we create the `/security-review` command:
 
-```bash
+```bash  theme={null}
 # Create a personal command
 mkdir -p ~/.claude/commands
 echo "Review this code for security vulnerabilities:" > ~/.claude/commands/security-review.md
@@ -96,7 +96,7 @@ Pass dynamic values to commands using argument placeholders:
 
 The `$ARGUMENTS` placeholder captures all arguments passed to the command:
 
-```bash
+```bash  theme={null}
 # Command definition
 echo 'Fix issue #$ARGUMENTS following our coding standards' > .claude/commands/fix-issue.md
 
@@ -109,7 +109,7 @@ echo 'Fix issue #$ARGUMENTS following our coding standards' > .claude/commands/f
 
 Access specific arguments individually using positional parameters (similar to shell scripts):
 
-```bash
+```bash  theme={null}
 # Command definition  
 echo 'Review PR #$1 with priority $2 and assign to $3' > .claude/commands/review-pr.md
 
@@ -130,7 +130,7 @@ Execute bash commands before the slash command runs using the `!` prefix. The ou
 
 For example:
 
-```markdown
+```markdown  theme={null}
 ---
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 description: Create a git commit
@@ -154,7 +154,7 @@ Include file contents in commands using the `@` prefix to [reference files](/en/
 
 For example:
 
-```markdown
+```markdown  theme={null}
 # Reference a specific file
 
 Review the implementation in @src/utils/helpers.js
@@ -182,7 +182,7 @@ Command files support frontmatter, useful for specifying metadata about the comm
 
 For example:
 
-```markdown
+```markdown  theme={null}
 ---
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 argument-hint: [message]
@@ -195,7 +195,7 @@ Create a git commit with message: $ARGUMENTS
 
 Example using positional arguments:
 
-```markdown
+```markdown  theme={null}
 ---
 argument-hint: [pr-number] [priority] [assignee]
 description: Review pull request
@@ -299,7 +299,7 @@ For Claude Code versions >= 1.0.124, you can see which custom slash commands
 
 To prevent Claude from executing any slash commands via the tool:
 
-```bash
+```bash  theme={null}
 /permissions
 # Add to deny rules: SlashCommand
 ```

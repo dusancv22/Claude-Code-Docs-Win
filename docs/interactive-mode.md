@@ -138,7 +138,7 @@ To run commands in the background, you can either:
 
 Run bash commands directly without going through Claude by prefixing your input with `!`:
 
-```bash
+```bash  theme={null}
 ! npm test
 ! git status
 ! ls -la

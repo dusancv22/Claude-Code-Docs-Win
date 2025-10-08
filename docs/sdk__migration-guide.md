@@ -24,13 +24,13 @@ The Claude Code SDK has been renamed to the **Claude Agent SDK** and its documen
 
 **1. Uninstall the old package:**
 
-```bash
+```bash  theme={null}
 npm uninstall @anthropic-ai/claude-code
 ```
 
 **2. Install the new package:**
 
-```bash
+```bash  theme={null}
 npm install @anthropic-ai/claude-agent-sdk
 ```
 
@@ -38,7 +38,7 @@ npm install @anthropic-ai/claude-agent-sdk
 
 Change all imports from `@anthropic-ai/claude-code` to `@anthropic-ai/claude-agent-sdk`:
 
-```typescript
+```typescript  theme={null}
 // Before
 import { query, tool, createSdkMcpServer } from "@anthropic-ai/claude-code";
 
@@ -54,7 +54,7 @@ import {
 
 If you have the package listed in your `package.json`, update it:
 
-```json
+```json  theme={null}
 // Before
 {
   "dependencies": {
@@ -76,13 +76,13 @@ That's it! No other code changes are required.
 
 **1. Uninstall the old package:**
 
-```bash
+```bash  theme={null}
 pip uninstall claude-code-sdk
 ```
 
 **2. Install the new package:**
 
-```bash
+```bash  theme={null}
 pip install claude-agent-sdk
 ```
 
@@ -90,7 +90,7 @@ pip install claude-agent-sdk
 
 Change all imports from `claude_code_sdk` to `claude_agent_sdk`:
 
-```python
+```python  theme={null}
 # Before
 from claude_code_sdk import query, ClaudeCodeOptions
 
@@ -102,7 +102,7 @@ from claude_agent_sdk import query, ClaudeAgentOptions
 
 Change `ClaudeCodeOptions` to `ClaudeAgentOptions`:
 
-```python
+```python  theme={null}
 # Before
 from claude_agent_sdk import query, ClaudeCodeOptions
 
@@ -134,7 +134,7 @@ Make any code changes needed to complete the migration.
 
 **Migration:**
 
-```python
+```python  theme={null}
 # BEFORE (v0.0.x)
 from claude_agent_sdk import query, ClaudeCodeOptions
 
@@ -161,7 +161,7 @@ options = ClaudeAgentOptions(
 **Migration:**
 
 <CodeGroup>
-  ```typescript TypeScript
+  ```typescript TypeScript theme={null}
   // BEFORE (v0.0.x) - Used Claude Code's system prompt by default
   const result = query({ prompt: "Hello" });
 
@@ -183,7 +183,7 @@ options = ClaudeAgentOptions(
   });
   ```
 
-  ```python Python
+  ```python Python theme={null}
   # BEFORE (v0.0.x) - Used Claude Code's system prompt by default
   async for message in query(prompt="Hello"):
       print(message)
@@ -220,7 +220,7 @@ options = ClaudeAgentOptions(
 **Migration:**
 
 <CodeGroup>
-  ```typescript TypeScript
+  ```typescript TypeScript theme={null}
   // BEFORE (v0.0.x) - Loaded all settings automatically
   const result = query({ prompt: "Hello" });
   // Would read from:
@@ -248,7 +248,7 @@ options = ClaudeAgentOptions(
   });
   ```
 
-  ```python Python
+  ```python Python theme={null}
   # BEFORE (v0.0.x) - Loaded all settings automatically
   async for message in query(prompt="Hello"):
       print(message)

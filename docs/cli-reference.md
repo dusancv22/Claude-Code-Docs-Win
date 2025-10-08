@@ -58,7 +58,7 @@ The `--agents` flag accepts a JSON object that defines one or more custom subage
 
 Example:
 
-```bash
+```bash  theme={null}
 claude --agents '{
   "code-reviewer": {
     "description": "Expert code reviewer. Use proactively after code changes.",

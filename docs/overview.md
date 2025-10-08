@@ -9,7 +9,7 @@ Prerequisites:
 * [Node.js 18 or newer](https://nodejs.org/en/download/)
 * A [Claude.ai](https://claude.ai) (recommended) or [Claude Console](https://console.anthropic.com/) account
 
-```bash
+```bash  theme={null}
 # Install Claude Code
 npm install -g @anthropic-ai/claude-code
 

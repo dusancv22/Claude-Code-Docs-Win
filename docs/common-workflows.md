@@ -12,13 +12,13 @@ Suppose you've just joined a new project and need to understand its structure qu
 
 <Steps>
   <Step title="Navigate to the project root directory">
-    ```bash
+    ```bash  theme={null}
     cd /path/to/project 
     ```
   </Step>
 
   <Step title="Start Claude Code">
-    ```bash
+    ```bash  theme={null}
     claude 
     ```
   </Step>
@@ -241,7 +241,7 @@ If you are in Normal Mode, **Shift+Tab** will first switch into Auto-Accept Mode
 
 To start a new session in Plan Mode, use the `--permission-mode plan` flag:
 
-```bash
+```bash  theme={null}
 claude --permission-mode plan
 ```
 
@@ -249,13 +249,13 @@ claude --permission-mode plan
 
 You can also run a query in Plan Mode directly with `-p` (i.e., in ["headless mode"](/en/docs/claude-code/sdk/sdk-headless)):
 
-```bash
+```bash  theme={null}
 claude --permission-mode plan -p "Analyze the authentication system and suggest improvements"
 ```
 
 ### Example: Planning a complex refactor
 
-```bash
+```bash  theme={null}
 claude --permission-mode plan
 ```
 
@@ -272,7 +272,7 @@ Claude will analyze the current implementation and create a comprehensive plan. 
 
 ### Configure Plan Mode as default
 
-```json
+```json  theme={null}
 // .claude/settings.json
 {
   "permissions": {
@@ -571,7 +571,7 @@ Claude Code provides two options for resuming previous conversations:
 
 <Steps>
   <Step title="Continue the most recent conversation">
-    ```bash
+    ```bash  theme={null}
     claude --continue
     ```
 
@@ -579,7 +579,7 @@ Claude Code provides two options for resuming previous conversations:
   </Step>
 
   <Step title="Continue in non-interactive mode">
-    ```bash
+    ```bash  theme={null}
     claude --continue --print "Continue with my task"
     ```
 
@@ -587,7 +587,7 @@ Claude Code provides two options for resuming previous conversations:
   </Step>
 
   <Step title="Show conversation picker">
-    ```bash
+    ```bash  theme={null}
     claude --resume
     ```
 
@@ -618,7 +618,7 @@ Claude Code provides two options for resuming previous conversations:
 
   Examples:
 
-  ```bash
+  ```bash  theme={null}
   # Continue most recent conversation
   claude --continue
 
@@ -649,7 +649,7 @@ Suppose you need to work on multiple tasks simultaneously with complete code iso
   </Step>
 
   <Step title="Create a new worktree">
-    ```bash
+    ```bash  theme={null}
     # Create a new worktree with a new branch 
     git worktree add ../project-feature-a -b feature-a
 
@@ -661,7 +661,7 @@ Suppose you need to work on multiple tasks simultaneously with complete code iso
   </Step>
 
   <Step title="Run Claude Code in each worktree">
-    ```bash
+    ```bash  theme={null}
     # Navigate to your worktree 
     cd ../project-feature-a
 
@@ -671,14 +671,14 @@ Suppose you need to work on multiple tasks simultaneously with complete code iso
   </Step>
 
   <Step title="Run Claude in another worktree">
-    ```bash
+    ```bash  theme={null}
     cd ../project-bugfix
     claude
     ```
   </Step>
 
   <Step title="Manage your worktrees">
-    ```bash
+    ```bash  theme={null}
     # List all worktrees
     git worktree list
 
@@ -712,7 +712,7 @@ Suppose you want to use Claude Code as a linter or code reviewer.
 
 **Add Claude to your build script:**
 
-```json
+```json  theme={null}
 // package.json
 {
     ...
@@ -737,7 +737,7 @@ Suppose you want to pipe data into Claude, and get back data in a structured for
 
 **Pipe data through Claude:**
 
-```bash
+```bash  theme={null}
 cat build-error.txt | claude -p 'concisely explain the root cause of this build error' > output.txt
 ```
 
@@ -755,7 +755,7 @@ Suppose you need Claude's output in a specific format, especially when integrati
 
 <Steps>
   <Step title="Use text format (default)">
-    ```bash
+    ```bash  theme={null}
     cat data.txt | claude -p 'summarize this data' --output-format text > summary.txt
     ```
 
@@ -763,7 +763,7 @@ Suppose you need Claude's output in a specific format, especially when integrati
   </Step>
 
   <Step title="Use JSON format">
-    ```bash
+    ```bash  theme={null}
     cat code.py | claude -p 'analyze this code for bugs' --output-format json > analysis.json
     ```
 
@@ -771,7 +771,7 @@ Suppose you need Claude's output in a specific format, especially when integrati
   </Step>
 
   <Step title="Use streaming JSON format">
-    ```bash
+    ```bash  theme={null}
     cat log.txt | claude -p 'parse this log file for errors' --output-format stream-json
     ```
 
@@ -801,13 +801,13 @@ Suppose you want to create reusable slash commands for your project that all tea
 
 <Steps>
   <Step title="Create a commands directory in your project">
-    ```bash
+    ```bash  theme={null}
     mkdir -p .claude/commands
     ```
   </Step>
 
   <Step title="Create a Markdown file for each command">
-    ```bash
+    ```bash  theme={null}
     echo "Analyze the performance of this code and suggest three specific optimizations:" > .claude/commands/optimize.md 
     ```
   </Step>
@@ -834,7 +834,7 @@ Suppose you want to create flexible slash commands that can accept additional in
 
 <Steps>
   <Step title="Create a command file with the $ARGUMENTS placeholder">
-    ```bash
+    ```bash  theme={null}
     echo 'Find and fix issue #$ARGUMENTS. Follow these steps: 1.
     Understand the issue described in the ticket 2. Locate the relevant code in
     our codebase 3. Implement a solution that addresses the root cause 4. Add
@@ -868,13 +868,13 @@ Suppose you want to create personal slash commands that work across all your pro
 
 <Steps>
   <Step title="Create a commands directory in your home folder">
-    ```bash
+    ```bash  theme={null}
     mkdir -p ~/.claude/commands 
     ```
   </Step>
 
   <Step title="Create a Markdown file for each command">
-    ```bash
+    ```bash  theme={null}
     echo "Review this code for security vulnerabilities, focusing on:" >
     ~/.claude/commands/security-review.md 
     ```

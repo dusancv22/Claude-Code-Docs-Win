@@ -19,7 +19,7 @@
 
 To install Claude Code, run the following command:
 
-```sh
+```sh  theme={null}
 npm install -g @anthropic-ai/claude-code
 ```
 
@@ -35,7 +35,7 @@ npm install -g @anthropic-ai/claude-code
 
 After the installation process completes, navigate to your project and start Claude Code:
 
-```bash
+```bash  theme={null}
 cd your-awesome-project
 claude
 ```
@@ -60,7 +60,7 @@ Claude Code offers the following authentication options:
 
 * Requires [Git for Windows](https://git-scm.com/downloads/win)
 * For portable Git installations, specify the path to your `bash.exe`:
-  ```powershell
+  ```powershell  theme={null}
   $env:CLAUDE_CODE_GIT_BASH_PATH="C:\Program Files\Git\bin\bash.exe"
   ```
 
@@ -76,7 +76,7 @@ If you encounter any issues during installation, consult the [troubleshooting gu
 
 ### Global npm installation
 
-Traditional method shown in the [install steps above](#install-and-authenticate)
+Traditional method shown in the [install steps above](#standard-installation)
 
 ### Native binary installation (Beta)
 
@@ -86,7 +86,7 @@ For a fresh install, run the following command:
 
 **macOS, Linux, WSL:**
 
-```bash
+```bash  theme={null}
 # Install stable version (default)
 curl -fsSL https://claude.ai/install.sh | bash
 
@@ -103,7 +103,7 @@ curl -fsSL https://claude.ai/install.sh | bash -s 1.0.58
 
 **Windows PowerShell:**
 
-```powershell
+```powershell  theme={null}
 # Install stable version (default)
 irm https://claude.ai/install.ps1 | iex
 
@@ -117,7 +117,7 @@ irm https://claude.ai/install.ps1 | iex
 
 **Windows CMD:**
 
-```batch
+```batch  theme={null}
 REM Install stable version (default)
 curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
 
@@ -162,12 +162,12 @@ Claude Code automatically keeps itself up to date to ensure you have the latest 
 
 Set the `DISABLE_AUTOUPDATER` environment variable in your shell or [settings.json file](/en/docs/claude-code/settings):
 
-```bash
+```bash  theme={null}
 export DISABLE_AUTOUPDATER=1
 ```
 
 ### Update manually
 
-```bash
+```bash  theme={null}
 claude update
 ```

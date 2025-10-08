@@ -14,7 +14,7 @@ All metrics are time series data exported via OpenTelemetry's standard metrics p
 
 Configure OpenTelemetry using environment variables:
 
-```bash
+```bash  theme={null}
 # 1. Enable telemetry
 export CLAUDE_CODE_ENABLE_TELEMETRY=1
 
@@ -55,7 +55,7 @@ The managed settings file is located at:
 
 Example managed settings configuration:
 
-```json
+```json  theme={null}
 {
   "env": {
     "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
@@ -114,7 +114,7 @@ For enterprise environments that require dynamic authentication, you can configu
 
 Add to your `.claude/settings.json`:
 
-```json
+```json  theme={null}
 {
   "otelHeadersHelper": "/bin/generate_opentelemetry_headers.sh"
 }
@@ -124,7 +124,7 @@ Add to your `.claude/settings.json`:
 
 The script must output valid JSON with string key-value pairs representing HTTP headers:
 
-```bash
+```bash  theme={null}
 #!/bin/bash
 # Example: Multiple headers
 echo "{\"Authorization\": \"Bearer $(get-token.sh)\", \"X-API-Key\": \"$(get-api-key.sh)\"}"
@@ -140,7 +140,7 @@ For scenarios requiring frequent token refresh, use an OpenTelemetry Collector a
 
 Organizations with multiple teams or departments can add custom attributes to distinguish between different groups using the `OTEL_RESOURCE_ATTRIBUTES` environment variable:
 
-```bash
+```bash  theme={null}
 # Add custom attributes for team identification
 export OTEL_RESOURCE_ATTRIBUTES="department=engineering,team.id=platform,cost_center=eng-123"
 ```
@@ -164,7 +164,7 @@ These custom attributes will be included in all metrics and events, allowing you
 
   **Examples:**
 
-  ```bash
+  ```bash  theme={null}
   # ❌ Invalid - contains spaces
   export OTEL_RESOURCE_ATTRIBUTES="org.name=John's Organization"
 
@@ -181,7 +181,7 @@ These custom attributes will be included in all metrics and events, allowing you
 
 ### Example Configurations
 
-```bash
+```bash  theme={null}
 # Console debugging (1-second intervals)
 export CLAUDE_CODE_ENABLE_TELEMETRY=1
 export OTEL_METRICS_EXPORTER=console

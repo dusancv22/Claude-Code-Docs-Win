@@ -68,7 +68,7 @@ The TPM per user decreases as team size grows because we expect fewer users to u
   * Add custom instructions: `/compact Focus on code samples and API usage`
   * Customize compaction by adding to CLAUDE.md:
 
-    ```markdown
+    ```markdown  theme={null}
     # Summary instructions
 
     When you are using compact, please focus on test output and code changes
@@ -103,7 +103,7 @@ These background processes consume a small amount of tokens (typically under \$0
 
 To check your current Claude Code version and installation details:
 
-```bash
+```bash  theme={null}
 claude doctor
 ```
 

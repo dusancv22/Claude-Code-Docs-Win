@@ -36,7 +36,7 @@ You can configure your model in several ways, listed in order of priority:
 
 Example usage:
 
-```bash
+```bash  theme={null}
 # Start with Opus
 claude --model opus
 
@@ -82,7 +82,7 @@ For Console/API users, the `[1m]` suffix can be added to full model names to
 enable a
 [1 million token context window](/en/docs/build-with-claude/context-windows#1m-token-context-window).
 
-```bash
+```bash  theme={null}
 # Example of using a full model name with the [1m] suffix
 /model anthropic.claude-sonnet-4-5-20250929-v1:0[1m]
 ```

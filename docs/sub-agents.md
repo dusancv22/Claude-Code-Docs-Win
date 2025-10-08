@@ -86,7 +86,7 @@ When subagent names conflict, project-level subagents take precedence over user-
 
 You can also define subagents dynamically using the `--agents` CLI flag, which accepts a JSON object:
 
-```bash
+```bash  theme={null}
 claude --agents '{
   "code-reviewer": {
     "description": "Expert code reviewer. Use proactively after code changes.",
@@ -112,7 +112,7 @@ For detailed information about the JSON format and all available options, see th
 
 Each subagent is defined in a Markdown file with this structure:
 
-```markdown
+```markdown  theme={null}
 ---
 name: your-sub-agent-name
 description: Description of when this subagent should be invoked
@@ -187,7 +187,7 @@ This opens an interactive menu where you can:
 
 You can also manage subagents by working directly with their files:
 
-```bash
+```bash  theme={null}
 # Create a project subagent
 mkdir -p .claude/agents
 echo '---
@@ -230,7 +230,7 @@ Request a specific subagent by mentioning it in your command:
 
 ### Code reviewer
 
-```markdown
+```markdown  theme={null}
 ---
 name: code-reviewer
 description: Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code.
@@ -265,7 +265,7 @@ Include specific examples of how to fix issues.
 
 ### Debugger
 
-```markdown
+```markdown  theme={null}
 ---
 name: debugger
 description: Debugging specialist for errors, test failures, and unexpected behavior. Use proactively when encountering any issues.
@@ -300,7 +300,7 @@ Focus on fixing the underlying issue, not just symptoms.
 
 ### Data scientist
 
-```markdown
+```markdown  theme={null}
 ---
 name: data-scientist
 description: Data analysis expert for SQL queries, BigQuery operations, and data insights. Use proactively for data analysis tasks and queries.
