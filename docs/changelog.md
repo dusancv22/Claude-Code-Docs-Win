@@ -8,6 +8,14 @@
 
 # Changelog
 
+## 2.0.11
+
+- Reduced system prompt size by 1.4k tokens
+- IDE: Fixed keyboard shortcuts and focus issues for smoother interaction
+- Fixed bash permission matching for commands with environment variables
+- Fixed Opus fallback rate limit errors appearing incorrectly
+- Fixed /add-dir command selecting wrong default tab
+
 ## 2.0.9
 
 - Fix regression where bash backgrounding stopped working
