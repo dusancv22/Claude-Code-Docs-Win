@@ -94,6 +94,55 @@ ensuring they work regardless of Claude's current directory:
 }
 ```
 
+### Plugin hooks
+
+[Plugins](/en/docs/claude-code/plugins) can provide hooks that integrate seamlessly with your user and project hooks. Plugin hooks are automatically merged with your configuration when plugins are enabled.
+
+**How plugin hooks work**:
+
+* Plugin hooks are defined in the plugin's `hooks/hooks.json` file or in a file given by a custom path to the `hooks` field.
+* When a plugin is enabled, its hooks are merged with user and project hooks
+* Multiple hooks from different sources can respond to the same event
+* Plugin hooks use the `${CLAUDE_PLUGIN_ROOT}` environment variable to reference plugin files
+
+**Example plugin hook configuration**:
+
+```json  theme={null}
+{
+  "description": "Automatic code formatting",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/format.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+<Note>
+  Plugin hooks use the same format as regular hooks with an optional `description` field to explain the hook's purpose.
+</Note>
+
+<Note>
+  Plugin hooks run alongside your custom hooks. If multiple hooks match an event, they all execute in parallel.
+</Note>
+
+**Environment variables for plugins**:
+
+* `${CLAUDE_PLUGIN_ROOT}`: Absolute path to the plugin directory
+* `${CLAUDE_PROJECT_DIR}`: Project root directory (same as for project hooks)
+* All standard environment variables are available
+
+See the [plugin components reference](/en/docs/claude-code/plugins-reference#hooks) for details on creating plugin hooks.
+
 ## Hook Events
 
 ### PreToolUse

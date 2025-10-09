@@ -82,6 +82,21 @@ Subagents are stored as Markdown files with YAML frontmatter in two possible loc
 
 When subagent names conflict, project-level subagents take precedence over user-level subagents.
 
+### Plugin agents
+
+[Plugins](/en/docs/claude-code/plugins) can provide custom subagents that integrate seamlessly with Claude Code. Plugin agents work identically to user-defined agents and appear in the `/agents` interface.
+
+**Plugin agent locations**: Plugins include agents in their `agents/` directory (or custom paths specified in the plugin manifest).
+
+**Using plugin agents**:
+
+* Plugin agents appear in `/agents` alongside your custom agents
+* Can be invoked explicitly: "Use the code-reviewer agent from the security-plugin"
+* Can be invoked automatically by Claude when appropriate
+* Can be managed (viewed, inspected) through `/agents` interface
+
+See the [plugin components reference](/en/docs/claude-code/plugins-reference#agents) for details on creating plugin agents.
+
 ### CLI-based configuration
 
 You can also define subagents dynamically using the `--agents` CLI flag, which accepts a JSON object:
@@ -366,6 +381,7 @@ Claude Code intelligently selects subagents based on context. Make your `descrip
 
 ## Related documentation
 
+* [Plugins](/en/docs/claude-code/plugins) - Extend Claude Code with custom agents through plugins
 * [Slash commands](/en/docs/claude-code/slash-commands) - Learn about other built-in commands
 * [Settings](/en/docs/claude-code/settings) - Configure Claude Code behavior
 * [Hooks](/en/docs/claude-code/hooks) - Automate workflows with event handlers

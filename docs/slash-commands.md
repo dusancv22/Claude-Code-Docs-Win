@@ -205,6 +205,58 @@ Review PR #$1 with priority $2 and assign to $3.
 Focus on security, performance, and code style.
 ```
 
+## Plugin commands
+
+[Plugins](/en/docs/claude-code/plugins) can provide custom slash commands that integrate seamlessly with Claude Code. Plugin commands work exactly like user-defined commands but are distributed through [plugin marketplaces](/en/docs/claude-code/plugin-marketplaces).
+
+### How plugin commands work
+
+Plugin commands are:
+
+* **Namespaced**: Commands can use the format `/plugin-name:command-name` to avoid conflicts (plugin prefix is optional unless there are name collisions)
+* **Automatically available**: Once a plugin is installed and enabled, its commands appear in `/help`
+* **Fully integrated**: Support all command features (arguments, frontmatter, bash execution, file references)
+
+### Plugin command structure
+
+**Location**: `commands/` directory in plugin root
+
+**File format**: Markdown files with frontmatter
+
+**Basic command structure**:
+
+```markdown  theme={null}
+---
+description: Brief description of what the command does
+---
+
+# Command Name
+
+Detailed instructions for Claude on how to execute this command.
+Include specific guidance on parameters, expected outcomes, and any special considerations.
+```
+
+**Advanced command features**:
+
+* **Arguments**: Use placeholders like `{arg1}` in command descriptions
+* **Subdirectories**: Organize commands in subdirectories for namespacing
+* **Bash integration**: Commands can execute shell scripts and programs
+* **File references**: Commands can reference and modify project files
+
+### Invocation patterns
+
+```shell Direct command (when no conflicts) theme={null}
+/command-name
+```
+
+```shell Plugin-prefixed (when needed for disambiguation) theme={null}
+/plugin-name:command-name
+```
+
+```shell With arguments (if command supports them) theme={null}
+/command-name arg1 arg2
+```
+
 ## MCP slash commands
 
 MCP servers can expose prompts as slash commands that become available in Claude Code. These commands are dynamically discovered from connected MCP servers.
@@ -336,6 +388,7 @@ available commands. In `/context`, a warning will show with "M of N commands".
 
 ## See also
 
+* [Plugins](/en/docs/claude-code/plugins) - Extend Claude Code with custom commands through plugins
 * [Identity and Access Management](/en/docs/claude-code/iam) - Complete guide to permissions, including MCP tool permissions
 * [Interactive mode](/en/docs/claude-code/interactive-mode) - Shortcuts, input modes, and interactive features
 * [CLI reference](/en/docs/claude-code/cli-reference) - Command-line flags and options

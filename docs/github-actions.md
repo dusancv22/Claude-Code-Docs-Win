@@ -38,8 +38,9 @@ The easiest way to set up this action is through Claude Code in the terminal. Ju
 This command will guide you through setting up the GitHub app and required secrets.
 
 <Note>
-  * You must be a repository admin to install the GitHub app and add secrets -
-    This quickstart method is only available for direct Claude API users. If
+  * You must be a repository admin to install the GitHub app and add secrets
+  * The GitHub app will request read & write permissions for Contents, Issues, and Pull requests
+  * This quickstart method is only available for direct Claude API users. If
     you're using AWS Bedrock or Google Vertex AI, please see the [Using with AWS
     Bedrock & Google Vertex AI](#using-with-aws-bedrock-%26-google-vertex-ai)
     section.
@@ -50,6 +51,14 @@ This command will guide you through setting up the GitHub app and required secre
 If the `/install-github-app` command fails or you prefer manual setup, please follow these manual setup instructions:
 
 1. **Install the Claude GitHub app** to your repository: [https://github.com/apps/claude](https://github.com/apps/claude)
+
+   The Claude GitHub app requires the following repository permissions:
+
+   * **Contents**: Read & write (to modify repository files)
+   * **Issues**: Read & write (to respond to issues)
+   * **Pull requests**: Read & write (to create PRs and push changes)
+
+   For more details on security and permissions, see the [security documentation](https://github.com/anthropics/claude-code-action/blob/main/docs/security.md).
 2. **Add ANTHROPIC\_API\_KEY** to your repository secrets ([Learn how to use secrets in GitHub Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions))
 3. **Copy the workflow file** from [examples/claude.yml](https://github.com/anthropics/claude-code-action/blob/main/examples/claude.yml) into your repository's `.github/workflows/`
 
@@ -201,6 +210,8 @@ Create a `CLAUDE.md` file in your repository root to define code style guideline
 ### Security considerations
 
 <Warning>Never commit API keys directly to your repository!</Warning>
+
+For comprehensive security guidance including permissions, authentication, and best practices, see the [Claude Code Action security documentation](https://github.com/anthropics/claude-code-action/blob/main/docs/security.md).
 
 Always use GitHub Secrets for API keys:
 
@@ -646,7 +657,7 @@ While the `/install-github-app` command is the recommended approach, you can als
 * **Manual GitHub Actions**: Direct workflow configuration for maximum flexibility
 * **MCP Configuration**: Dynamic loading of Model Context Protocol servers
 
-See the [Claude Code Action repository](https://github.com/anthropics/claude-code-action) for detailed documentation.
+See the [Claude Code Action documentation](https://github.com/anthropics/claude-code-action/blob/main/docs) for detailed guides on authentication, security, and advanced configuration.
 
 ### Customizing Claude's behavior
 

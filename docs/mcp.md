@@ -730,6 +730,71 @@ claude mcp remove github
   Without the `cmd /c` wrapper, you'll encounter "Connection closed" errors because Windows cannot directly execute `npx`. (See the note above for an explanation of the `--` parameter.)
 </Warning>
 
+### Plugin-provided MCP servers
+
+[Plugins](/en/docs/claude-code/plugins) can bundle MCP servers, automatically providing tools and integrations when the plugin is enabled. Plugin MCP servers work identically to user-configured servers.
+
+**How plugin MCP servers work**:
+
+* Plugins define MCP servers in `.mcp.json` at the plugin root or inline in `plugin.json`
+* When a plugin is enabled, its MCP servers start automatically
+* Plugin MCP tools appear alongside manually configured MCP tools
+* Plugin servers are managed through plugin installation (not `/mcp` commands)
+
+**Example plugin MCP configuration**:
+
+In `.mcp.json` at plugin root:
+
+```json  theme={null}
+{
+  "database-tools": {
+    "command": "${CLAUDE_PLUGIN_ROOT}/servers/db-server",
+    "args": ["--config", "${CLAUDE_PLUGIN_ROOT}/config.json"],
+    "env": {
+      "DB_URL": "${DB_URL}"
+    }
+  }
+}
+```
+
+Or inline in `plugin.json`:
+
+```json  theme={null}
+{
+  "name": "my-plugin",
+  "mcpServers": {
+    "plugin-api": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/servers/api-server",
+      "args": ["--port", "8080"]
+    }
+  }
+}
+```
+
+**Plugin MCP features**:
+
+* **Automatic lifecycle**: Servers start when plugin enables, but you must restart Claude Code to apply MCP server changes (enabling or disabling)
+* **Environment variables**: Use `${CLAUDE_PLUGIN_ROOT}` for plugin-relative paths
+* **User environment access**: Access to same environment variables as manually configured servers
+* **Multiple transport types**: Support stdio, SSE, and HTTP transports (transport support may vary by server)
+
+**Viewing plugin MCP servers**:
+
+```bash  theme={null}
+# Within Claude Code, see all MCP servers including plugin ones
+/mcp
+```
+
+Plugin servers appear in the list with indicators showing they come from plugins.
+
+**Benefits of plugin MCP servers**:
+
+* **Bundled distribution**: Tools and servers packaged together
+* **Automatic setup**: No manual MCP configuration needed
+* **Team consistency**: Everyone gets the same tools when plugin is installed
+
+See the [plugin components reference](/en/docs/claude-code/plugins-reference#mcp-servers) for details on bundling MCP servers with plugins.
+
 ## MCP installation scopes
 
 MCP servers can be configured at three different scope levels, each serving distinct purposes for managing server accessibility and sharing. Understanding these scopes helps you determine the best way to configure servers for your specific needs.

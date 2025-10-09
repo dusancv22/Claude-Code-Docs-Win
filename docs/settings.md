@@ -150,6 +150,102 @@ Claude Code supports custom AI subagents that can be configured at both user and
 
 Subagent files define specialized AI assistants with custom prompts and tool permissions. Learn more about creating and using subagents in the [subagents documentation](/en/docs/claude-code/sub-agents).
 
+## Plugin configuration
+
+Claude Code supports a plugin system that lets you extend functionality with custom commands, agents, hooks, and MCP servers. Plugins are distributed through marketplaces and can be configured at both user and repository levels.
+
+### Plugin settings
+
+Plugin-related settings in `settings.json`:
+
+```json  theme={null}
+{
+  "enabledPlugins": {
+    "formatter@company-tools": true,
+    "deployer@company-tools": true,
+    "analyzer@security-plugins": false
+  },
+  "extraKnownMarketplaces": {
+    "company-tools": {
+      "source": "github",
+      "repo": "company/claude-plugins"
+    }
+  }
+}
+```
+
+#### `enabledPlugins`
+
+Controls which plugins are enabled. Format: `"plugin-name@marketplace-name": true/false`
+
+**Scopes**:
+
+* **User settings** (`~/.claude/settings.json`): Personal plugin preferences
+* **Project settings** (`.claude/settings.json`): Project-specific plugins shared with team
+* **Local settings** (`.claude/settings.local.json`): Per-machine overrides (not committed)
+
+**Example**:
+
+```json  theme={null}
+{
+  "enabledPlugins": {
+    "code-formatter@team-tools": true,
+    "deployment-tools@team-tools": true,
+    "experimental-features@personal": false
+  }
+}
+```
+
+#### `extraKnownMarketplaces`
+
+Defines additional marketplaces that should be made available for the repository. Typically used in repository-level settings to ensure team members have access to required plugin sources.
+
+**When a repository includes `extraKnownMarketplaces`**:
+
+1. Team members are prompted to install the marketplace when they trust the folder
+2. Team members are then prompted to install plugins from that marketplace
+3. Users can skip unwanted marketplaces or plugins (stored in user settings)
+4. Installation respects trust boundaries and requires explicit consent
+
+**Example**:
+
+```json  theme={null}
+{
+  "extraKnownMarketplaces": {
+    "company-tools": {
+      "source": {
+        "source": "github",
+        "repo": "company-org/claude-plugins"
+      }
+    },
+    "security-plugins": {
+      "source": {
+        "source": "git",
+        "url": "https://git.company.com/security/plugins.git"
+      }
+    }
+  }
+}
+```
+
+**Marketplace source types**:
+
+* `github`: GitHub repository (uses `repo`)
+* `git`: Any git URL (uses `url`)
+* `directory`: Local filesystem path (uses `path`, for development only)
+
+### Managing plugins
+
+Use the `/plugin` command to manage plugins interactively:
+
+* Browse available plugins from marketplaces
+* Install/uninstall plugins
+* Enable/disable plugins
+* View plugin details (commands, agents, hooks provided)
+* Add/remove marketplaces
+
+Learn more about the plugin system in the [plugins documentation](/en/docs/claude-code/plugins).
+
 ## Environment variables
 
 Claude Code supports the following environment variables to control its behavior:
