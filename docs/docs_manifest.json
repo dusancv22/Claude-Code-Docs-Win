@@ -249,14 +249,14 @@
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
-      "hash": "11398626e73620b04e2afe043a37287a17efa3dc576d33c494031ca0f0b52d07",
-      "last_updated": "2025-10-09T18:29:53.639131",
+      "hash": "5a7442ae81cd9674a5777bf3c256dd7119b1a1bd42ae73f7fde8ba9eb8a61c5f",
+      "last_updated": "2025-10-11T01:25:40.083265",
       "source": "claude-code-repository"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-10-10T21:17:08.006626",
-    "fetch_duration_seconds": 22.563048,
+    "last_fetch_completed": "2025-10-11T01:25:40.083283",
+    "fetch_duration_seconds": 22.461899,
     "total_pages_discovered": 41,
     "pages_fetched_successfully": 42,
     "pages_failed": 0,
@@ -266,7 +266,7 @@
     "total_files": 42,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-10-10T21:17:08.006656",
+  "last_updated": "2025-10-11T01:25:40.083303",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
