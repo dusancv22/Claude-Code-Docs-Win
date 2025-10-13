@@ -28,6 +28,12 @@ npm install -g @anthropic-ai/claude-code
   Alternatively, try our new native install, now in beta.
 </Tip>
 
+**Homebrew (macOS, Linux):**
+
+```sh  theme={null}
+brew install --cask claude-code
+```
+
 **macOS, Linux, WSL:**
 
 ```bash  theme={null}
@@ -286,6 +292,7 @@ See the [CLI reference](/en/docs/claude-code/cli-reference) for a complete list 
   </Accordion>
 
   <Accordion title="Save time with shortcuts">
+    * Press `?` to see all available keyboard shortcuts
     * Use Tab for command completion
     * Press ↑ for command history
     * Type `/` to see all slash commands

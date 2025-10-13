@@ -82,7 +82,17 @@ Traditional method shown in the [install steps above](#standard-installation)
 
 If you have an existing installation of Claude Code, use `claude install` to start the native binary installation.
 
-For a fresh install, run the following command:
+For a fresh install, run one of the following commands:
+
+**Homebrew (macOS, Linux):**
+
+```sh  theme={null}
+brew install --cask claude-code
+```
+
+<Note>
+  Claude Code installed via Homebrew will auto-update outside of the brew directory unless explicitly disabled with the `DISABLE_AUTOUPDATER` environment variable (see [Auto updates](#auto-updates) section).
+</Note>
 
 **macOS, Linux, WSL:**
 
@@ -112,7 +122,6 @@ irm https://claude.ai/install.ps1 | iex
 
 # Install specific version number
 & ([scriptblock]::Create((irm https://claude.ai/install.ps1))) 1.0.58
-
 ```
 
 **Windows CMD:**

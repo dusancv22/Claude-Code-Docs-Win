@@ -38,7 +38,6 @@ Total lines of code written by Claude Code that users have accepted in their ses
 Percentage of times users accept code editing tool usage, including:
 
 * Edit
-* MultiEdit
 * Write
 * NotebookEdit
 

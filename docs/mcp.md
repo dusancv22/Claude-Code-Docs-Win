@@ -136,7 +136,6 @@ export const MCPServersTable = ({platform = "all"}) => {
     description: "Access real-time customer conversations, tickets, and user data",
     documentation: "https://developers.intercom.com/docs/guides/mcp",
     urls: {
-      sse: "https://mcp.intercom.com/sse",
       http: "https://mcp.intercom.com/mcp"
     },
     authentication: {
@@ -169,7 +168,7 @@ export const MCPServersTable = ({platform = "all"}) => {
     description: "Integrate with Linear's issue tracking and project management",
     documentation: "https://linear.app/docs/mcp",
     urls: {
-      sse: "https://mcp.linear.app/sse"
+      http: "https://mcp.linear.app/mcp"
     },
     authentication: {
       type: "oauth"
@@ -201,7 +200,6 @@ export const MCPServersTable = ({platform = "all"}) => {
     description: "Integrate PayPal commerce capabilities, payment processing, transaction management",
     documentation: "https://www.paypal.ai/",
     urls: {
-      sse: "https://mcp.paypal.com/sse",
       http: "https://mcp.paypal.com/mcp"
     },
     authentication: {
@@ -234,7 +232,6 @@ export const MCPServersTable = ({platform = "all"}) => {
     description: "Monitor errors, debug production issues",
     documentation: "https://docs.sentry.io/product/sentry-mcp/",
     urls: {
-      sse: "https://mcp.sentry.dev/sse",
       http: "https://mcp.sentry.dev/mcp"
     },
     authentication: {
@@ -1055,8 +1052,8 @@ If you've already configured MCP servers in Claude Desktop, you can import them:
 You can use Claude Code itself as an MCP server that other applications can connect to:
 
 ```bash  theme={null}
-# Start Claude as a stdio MCP server with explicit transport
-claude mcp serve --transport stdio
+# Start Claude as a stdio MCP server
+claude mcp serve
 ```
 
 You can use this in Claude Desktop by adding this configuration to claude\_desktop\_config.json:
@@ -1067,7 +1064,7 @@ You can use this in Claude Desktop by adding this configuration to claude\_deskt
     "claude-code": {
       "type": "stdio",
       "command": "claude",
-      "args": ["mcp", "serve", "--transport", "stdio"],
+      "args": ["mcp", "serve"],
       "env": {}
     }
   }

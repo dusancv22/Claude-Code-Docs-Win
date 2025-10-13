@@ -309,12 +309,12 @@ Incremented after each API request.
 
 #### Code Edit Tool Decision Counter
 
-Incremented when user accepts or rejects Edit, MultiEdit, Write, or NotebookEdit tool usage.
+Incremented when user accepts or rejects Edit, Write, or NotebookEdit tool usage.
 
 **Attributes**:
 
 * All [standard attributes](#standard-attributes)
-* `tool`: Tool name (`"Edit"`, `"MultiEdit"`, `"Write"`, `"NotebookEdit"`)
+* `tool`: Tool name (`"Edit"`, `"Write"`, `"NotebookEdit"`)
 * `decision`: User decision (`"accept"`, `"reject"`)
 * `language`: Programming language of the edited file (e.g., `"TypeScript"`, `"Python"`, `"JavaScript"`, `"Markdown"`). Returns `"unknown"` for unrecognized file extensions.
 
@@ -411,7 +411,7 @@ Logged when a tool permission decision is made (accept/reject).
 * All [standard attributes](#standard-attributes)
 * `event.name`: `"tool_decision"`
 * `event.timestamp`: ISO 8601 timestamp
-* `tool_name`: Name of the tool (e.g., "Read", "Edit", "MultiEdit", "Write", "NotebookEdit", etc.)
+* `tool_name`: Name of the tool (e.g., "Read", "Edit", "Write", "NotebookEdit", etc.)
 * `decision`: Either `"accept"` or `"reject"`
 * `source`: Decision source - `"config"`, `"user_permanent"`, `"user_temporary"`, `"user_abort"`, or `"user_reject"`
 
