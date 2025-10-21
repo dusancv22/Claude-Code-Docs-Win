@@ -21,8 +21,8 @@
     "claude-code-on-the-web.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/claude-code-on-the-web",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/claude-code-on-the-web.md",
-      "hash": "0c58f334c060c096b515c4c4f815251af9f8ca92672c66a8fe56ddba357a7f44",
-      "last_updated": "2025-10-20T18:31:16.349451"
+      "hash": "d0a276452aabf2fa561386deca55ab194091eaaf78447bb898fae58dd31c72cf",
+      "last_updated": "2025-10-21T01:40:15.983721"
     },
     "cli-reference.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/cli-reference",
@@ -81,8 +81,8 @@
     "hooks.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/hooks",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/hooks.md",
-      "hash": "697f782b01e709419aa4ccf13cdd69d3b38a59ac5c2099930e2fceb51513e6c4",
-      "last_updated": "2025-10-13T21:18:09.203847"
+      "hash": "05007d948a24cf872946d997161f3ad332687d9c9beadc024c25cc005243f195",
+      "last_updated": "2025-10-21T01:40:21.336994"
     },
     "hooks-guide.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/hooks-guide",
@@ -267,14 +267,14 @@
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
-      "hash": "b885f33b3181fbcb4c088ff181758a2b08ac15d1659d666a7bee4003ef95567f",
-      "last_updated": "2025-10-18T01:26:03.523662",
+      "hash": "389319ac979e2ce41ce828a7e1c4cc51b9275cc91f3a73f5bb59bcf794bdc519",
+      "last_updated": "2025-10-21T01:40:37.251713",
       "source": "claude-code-repository"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-10-20T18:31:38.346850",
-    "fetch_duration_seconds": 25.052294,
+    "last_fetch_completed": "2025-10-21T01:40:37.251727",
+    "fetch_duration_seconds": 28.418532,
     "total_pages_discovered": 44,
     "pages_fetched_successfully": 45,
     "pages_failed": 0,
@@ -284,7 +284,7 @@
     "total_files": 45,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-10-20T18:31:38.346870",
+  "last_updated": "2025-10-21T01:40:37.251740",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
