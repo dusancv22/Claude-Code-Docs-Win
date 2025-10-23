@@ -219,8 +219,8 @@
     "skills.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/skills",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/skills.md",
-      "hash": "8cd24d583576623dea0ed3d62064f49b946ae1a4ffcea3498489cc7ee440e322",
-      "last_updated": "2025-10-23T06:31:34.508583"
+      "hash": "8da5989342f2600b8659c692922a14499645a0a03669920d18ebeaad7c9cd883",
+      "last_updated": "2025-10-23T15:22:33.651139"
     },
     "slash-commands.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/slash-commands",
@@ -273,8 +273,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-10-23T12:45:31.657758",
-    "fetch_duration_seconds": 24.846359,
+    "last_fetch_completed": "2025-10-23T15:22:37.395145",
+    "fetch_duration_seconds": 23.951063,
     "total_pages_discovered": 44,
     "pages_fetched_successfully": 45,
     "pages_failed": 0,
@@ -284,7 +284,7 @@
     "total_files": 45,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-10-23T12:45:31.657795",
+  "last_updated": "2025-10-23T15:22:37.395169",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
