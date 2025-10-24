@@ -81,8 +81,8 @@
     "hooks.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/hooks",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/hooks.md",
-      "hash": "05007d948a24cf872946d997161f3ad332687d9c9beadc024c25cc005243f195",
-      "last_updated": "2025-10-21T01:40:21.336994"
+      "hash": "d59c7aa1a6421149f5b35870863df80416572a0f0c1e865fe65860507dd3cf1a",
+      "last_updated": "2025-10-24T18:28:28.504906"
     },
     "hooks-guide.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/hooks-guide",
@@ -273,8 +273,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-10-24T15:22:04.916159",
-    "fetch_duration_seconds": 24.317589,
+    "last_fetch_completed": "2025-10-24T18:28:44.456323",
+    "fetch_duration_seconds": 24.074148,
     "total_pages_discovered": 44,
     "pages_fetched_successfully": 45,
     "pages_failed": 0,
@@ -284,7 +284,7 @@
     "total_files": 45,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-10-24T15:22:04.916192",
+  "last_updated": "2025-10-24T18:28:44.456351",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
