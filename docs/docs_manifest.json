@@ -273,8 +273,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-10-26T09:19:12.309056",
-    "fetch_duration_seconds": 23.810816,
+    "last_fetch_completed": "2025-10-26T12:39:08.491016",
+    "fetch_duration_seconds": 23.949183,
     "total_pages_discovered": 44,
     "pages_fetched_successfully": 45,
     "pages_failed": 0,
@@ -284,7 +284,7 @@
     "total_files": 45,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-10-26T09:19:12.309084",
+  "last_updated": "2025-10-26T12:39:08.491044",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
