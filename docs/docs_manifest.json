@@ -153,8 +153,8 @@
     "output-styles.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/output-styles",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/output-styles.md",
-      "hash": "aea1e5e48dad10e9a943b2b9ab978ecf1cc4eb77d734e0d9e2348f0ba3976711",
-      "last_updated": "2025-10-08T01:29:10.781521"
+      "hash": "2c29e788f421b4fb9a1a0e1d3f2ddf386644e8983daac92e9d3ef6ac9e0eaad2",
+      "last_updated": "2025-10-29T21:19:34.326532"
     },
     "overview.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/overview",
@@ -273,8 +273,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-10-29T18:32:00.779077",
-    "fetch_duration_seconds": 24.785854,
+    "last_fetch_completed": "2025-10-29T21:19:44.076971",
+    "fetch_duration_seconds": 24.246101,
     "total_pages_discovered": 44,
     "pages_fetched_successfully": 45,
     "pages_failed": 0,
@@ -284,7 +284,7 @@
     "total_files": 45,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-10-29T18:32:00.779103",
+  "last_updated": "2025-10-29T21:19:44.076996",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
