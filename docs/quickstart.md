@@ -14,43 +14,43 @@ Make sure you have:
 
 ## Step 1: Install Claude Code
 
-To install Claude Code, use one of the following methods:
+### NPM Install
 
-<Tabs>
-  <Tab title="Native Install (Recommended)">
-    **Homebrew (macOS, Linux):**
+If you have [Node.js 18 or newer installed](https://nodejs.org/en/download/):
 
-    ```sh  theme={null}
-    brew install --cask claude-code
-    ```
+```sh  theme={null}
+npm install -g @anthropic-ai/claude-code
+```
 
-    **macOS, Linux, WSL:**
+### Native Install
 
-    ```bash  theme={null}
-    curl -fsSL https://claude.ai/install.sh | bash
-    ```
+<Tip>
+  Alternatively, try our new native install, now in beta.
+</Tip>
 
-    **Windows PowerShell:**
+**Homebrew (macOS, Linux):**
 
-    ```powershell  theme={null}
-    irm https://claude.ai/install.ps1 | iex
-    ```
+```sh  theme={null}
+brew install --cask claude-code
+```
 
-    **Windows CMD:**
+**macOS, Linux, WSL:**
 
-    ```batch  theme={null}
-    curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
-    ```
-  </Tab>
+```bash  theme={null}
+curl -fsSL https://claude.ai/install.sh | bash
+```
 
-  <Tab title="NPM">
-    If you have [Node.js 18 or newer installed](https://nodejs.org/en/download/):
+**Windows PowerShell:**
 
-    ```sh  theme={null}
-    npm install -g @anthropic-ai/claude-code
-    ```
-  </Tab>
-</Tabs>
+```powershell  theme={null}
+irm https://claude.ai/install.ps1 | iex
+```
+
+**Windows CMD:**
+
+```batch  theme={null}
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
 
 ## Step 2: Log in to your account
 

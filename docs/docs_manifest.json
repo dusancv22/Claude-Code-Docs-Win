@@ -183,8 +183,8 @@
     "quickstart.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/quickstart",
       "original_md_url": "https://docs.claude.com/en/docs/claude-code/quickstart.md",
-      "hash": "4f6f335c297e9d57c9a195666c2a113f55074d0222e785936653849eb893ef5e",
-      "last_updated": "2025-10-30T18:31:06.493189"
+      "hash": "62c8ded2c3f4b0ef50cea0a43797c8384643305eb5076e1340ed2baeeb319fb6",
+      "last_updated": "2025-10-30T21:19:10.244261"
     },
     "sandboxing.md": {
       "original_url": "https://docs.claude.com/en/docs/claude-code/sandboxing",
@@ -273,8 +273,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2025-10-30T18:31:13.643086",
-    "fetch_duration_seconds": 25.047947,
+    "last_fetch_completed": "2025-10-30T21:19:17.265173",
+    "fetch_duration_seconds": 24.037074,
     "total_pages_discovered": 44,
     "pages_fetched_successfully": 45,
     "pages_failed": 0,
@@ -284,7 +284,7 @@
     "total_files": 45,
     "fetch_tool_version": "3.0"
   },
-  "last_updated": "2025-10-30T18:31:13.643119",
+  "last_updated": "2025-10-30T21:19:17.265203",
   "base_url": "https://raw.githubusercontent.com/dusancv22/Claude-Code-Docs-Win/main/docs/",
   "github_repository": "dusancv22/Claude-Code-Docs-Win",
   "github_ref": "main",
